@@ -1,0 +1,14 @@
+AI: https://unsplash.com/photos/naSAHDWRNbQ?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+SOFTWARE ENGINEERING:https://unsplash.com/photos/uyfohHiTxho?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+COMPUTER ARCHITECTURE:
+COMPUTER GRAPHICS:https://unsplash.com/photos/tmTidmpILWw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+DATA STRUCTURE:https://unsplash.com/photos/Skf7HxARcoc?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+COMPUTATIONAL SCIENCE:
+ANALYSIS OF ALGORITHMS:
+COMPUTER NETWORKING:https://unsplash.com/photos/M5tzZtFCOfs?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+MACHINE LEARNING:https://unsplash.com/photos/f57lx37DCM4?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+OPERATING SYSTEMS:https://unsplash.com/photos/z508Zk08HNU?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+DATABASE:https://unsplash.com/photos/GNyjCePVRs8?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+DATA SCIENCE:https://unsplash.com/photos/1K6IQsQbizI?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+web-dev:https://unsplash.com/photos/Xr1Lwph6eGI?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+Developer:https://unsplash.com/photos/6sAl6aQ4OWI?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
