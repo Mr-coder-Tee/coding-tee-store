@@ -1,0 +1,89 @@
+:root{
+    --Anton: 'Anton', sans-serif;
+    --BebasNeue: 'Bebas Neue', cursive;
+    --CormorantGaramond: 'Cormorant Garamond', serif;
+    --Rajdhani: 'Rajdhani', sans-serif;
+    --SourceCodePro: 'Source Code Pro', monospace;
+
+    --MainColor:white;
+    --PrimaryColor:black;
+    --SecondaryColor:red;
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    padding: 5px 5px 0px 5px;
+    border: 2px solid blueviolet;
+    height: 100vh;
+}
+/* -----navigation----- */
+.Nav-container{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+.Nav-container .logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+    padding: 5px;
+}
+.Nav-container .logo:hover{
+    background: rgba(128, 128, 128, 0.247);
+}
+.Nav-container .logo .imgbx{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+.Nav-container .logo .imgbx img{
+    height: 40px;
+    object-fit: cover;
+}
+.Nav-container .logo h3{
+    font-family: var(--SourceCodePro);
+}
+/* x-----navigation-----x */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
