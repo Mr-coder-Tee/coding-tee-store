@@ -21,35 +21,34 @@ body{
     height: 100vh;
 }
 /* -----navigation----- */
-.Nav-container{
+/* .Nav-container{
     width: 100%;
     height: 30%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 10px;
-}
+    border: 2px solid rgba(0, 0, 0, .09);
+} */
 .Nav-container .logo{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     cursor: pointer;
     transition: 1s ease-in-out;
     padding: 5px;
+    border: 2p solid red;
+
 }
 .Nav-container .logo:hover{
-    background: rgba(128, 128, 128, 0.247);
+    background: rgb(128, 128, 128,.2);
 }
-.Nav-container .logo .imgbx{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-}
-.Nav-container .logo .imgbx img{
-    height: 40px;
-    object-fit: cover;
+
+.Nav-container .logo img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
 }
 .Nav-container .logo h3{
     font-family: var(--SourceCodePro);
