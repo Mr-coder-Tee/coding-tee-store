@@ -8,8 +8,8 @@ import useStyles from './style'
 const NavBar = () => {
     const classes=useStyles();
     return ( 
-        <div className="Nav-container">
-            <div className="logo">
+        <div className={classes.NavContainer}>
+            <div className={classes.NavContainerLogo}>
                 <img src={cup} alt="img"/>
                 <h4>Coding Tee</h4>
             </div>
