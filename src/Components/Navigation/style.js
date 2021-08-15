@@ -5,7 +5,6 @@ export default makeStyles(()=>({
 
     NavContainer:{
         width: "100%",
-        height: "30%",
         display: "flex",
         justifyContent: "space-between",
         aligniItems: "center",
@@ -16,23 +15,37 @@ export default makeStyles(()=>({
     },
     NavContainerLogo:{
         display: "flex",
+        justifyContent:"center",
         alignItems: "center",
         cursor: "pointer",
-        transition:" 1s ease-in-out",
+        transition:"all 1s ease-in-out",
         padding: "5px",
-        border: "2p solid red", 
         '&:hover':{
-            background: "rgb(128, 128, 128,.1)",
+            background: "rgba(128, 128, 128,.1)",
         },
         '& img':{
-            width: "45px",
-            height: "45px",
-            borderRadius: "50%",
+            width: "40px",
+            height: "40px",
+            color:"white",
+            filter:"invert(1)",
         },
+        '& h2':{
+            fontFamily: "var(--SourceCodePro)",
+            color:"white",
+        }
 
     },
     NavContainerLogoH:{
         fontFamily: "var(--SourceCodePro)",
+    },
+    btn:{
+        color:"white",
+        transition:" 1s ease-in-out",
+        padding:"15px",
+        '&:hover':{
+            background:"white",
+            color:"black",
+        },
     },
 
 }));

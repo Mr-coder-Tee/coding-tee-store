@@ -9,22 +9,33 @@
     --MainColor:white;
     --PrimaryColor:black;
     --SecondaryColor:red;
-    --NavBarColor:rgba(0, 0, 0, 0.2);
+    --NavBarColor:rgba(0, 0, 0, .8);
 }
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
 }
 body{
-    padding: 5px 5px 0px 5px;
-    border: 2px solid blueviolet;
-    height: 100vh;
+    position: relative;
+    border: 2px solid red;
+}
+.App-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-height: 100vh;
+
+    border: 2px solid springgreen;
 }
 
-/* https://material-ui.com/styles/advanced/ */
-
-
+.footerContainer{
+    width: 100%;
+    min-height: 300px;
+    background: var(--NavBarColor);
+}
 
 
 
