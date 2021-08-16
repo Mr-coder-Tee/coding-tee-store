@@ -10,7 +10,7 @@ export default makeStyles(()=>({
         aligniItems: "center",
         padding: "5px 10px",
         border: "2px solid rgba(0, 0, 0, .09)",
-        marginBottom:"10px",
+        marginBottom:"1px",
         background:"var(--NavBarColor)",
     },
     NavContainerLogo:{

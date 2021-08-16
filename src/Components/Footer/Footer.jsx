@@ -1,53 +1,65 @@
 import React from 'react';
 import useStyles from './styles'
 import { WbSunnyOutlined,Brightness2Outlined } from '@material-ui/icons';
-import { Formik,Form } from 'formik';
-import * as Yup from 'yup';
-import TextField from './Subcribe/TextField';
+import cup from '../../Images/cup_java_icon.png'
+
 
 
 
 
 const Footer = () => {
+    const classes=useStyles();
     return ( 
-        <div className="footerContainer">
-            <div className="SubForm">
-            <Formik
-                initialValues={{
-                    name:'',
-                    surname:'',
-                    age:'',
-                    dob:'',
-                    location:''
-                }}
-            >
-                {formik=>(
-                    <div className="form">
-                        <h2>Subcribe</h2>
-                        <p>Sign up to get the latest on sales,new releases and more...</p>
-                        <Form>
-                            <TextField label="First Name" name="name" type="text"/>
-                            <TextField label="Your Email" name="name" type="text"/>
-                            <div className="formbtnbx">
-                                <button>Sign up</button>
-                            </div>
-                        </Form>
+        <div className={classes.footerContainer}>
+            <div className={classes.row}>
+                <div className={classes.contactInfo}>
+                    <div className={classes.logo}>
+                        <img src={cup} alt="img"/>
+                        <h1>Coding Tee</h1>
                     </div>
-                )}
-            </Formik>
-
+                    <div className={classes.contactdetails}>
+                        <i class="fa fa-twitter" ></i>
+                        <i class="fa fa-facebook" ></i>
+                        <i class="fa fa-instagram" ></i>
+                        <i class="fa fa-linkedin" ></i>
+                        <i class="fa fa-github" ></i>
+                        <i class="fa fa-whatsapp" ></i>
+                    </div>
+                </div>
+                <div className={classes.footerother}>
+                    <div className={classes.FooterCollections}>
+                        <h2>Collections</h2>
+                        <ul>
+                            <li>AI</li>
+                            <li>Data science</li>
+                            <li>OS</li>
+                            <li>Algorithms</li>
+                            <li>AI</li>
+                            <li>Data science</li>
+                            <li>OS</li>
+                            <li>Algorithms</li>
+                            <li>Algorithms</li>
+                            <li>AI</li>
+                            <li>Data science</li>
+                            <li>OS</li>
+                            <li>Algorithms</li>
+                        </ul>
+                    </div>
+                    <div className={classes.legal}>
+                        <h2>Legal</h2>
+                        <ul>
+                            <li>Privacy Policy</li>
+                            <li>Copy Right Policy</li>
+                            <li>Delivery Policy</li>
+                            <li>Refund Policy</li>
+                            <li>Terms & Conditions</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div className="contactInfo">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-                <i class="fa fa-facebook" aria-hidden="true"></i>
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                <i class="fa fa-github" aria-hidden="true"></i>
-                <i class="fa fa-whatsapp" aria-hidden="true"></i>
-            </div>
-            <div className="copyRights">
+            <div className={classes.copyRights}>
                 <div>
-                    <span>&copy;2021 Coding Tee</span>
+                    <span>&copy;2021 Coding Tee.</span>
                 </div>
                 <div>
                     <WbSunnyOutlined/>

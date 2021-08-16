@@ -9,7 +9,7 @@
     --MainColor:white;
     --PrimaryColor:black;
     --SecondaryColor:red;
-    --NavBarColor:rgba(0, 0, 0, .8);
+    --NavBarColor:rgba(0, 0, 0, 1);
 }
 *{
     padding: 0;
@@ -20,28 +20,18 @@
 }
 body{
     position: relative;
-    border: 2px solid red;
 }
 .App-container{
+    flex-direction: column;
     width: 100%;
-    height: 100%;
-    position: relative;
-    min-height: 100vh;
-
-    border: 2px solid springgreen;
+    z-index: 300;
 }
-
-.footerContainer{
+.homepageContainer{
     width: 100%;
-    min-height: 300px;
-    background: var(--NavBarColor);
+    max-height: calc(100vh-68px);
+    border: 2px solid red;
+    /* background: skyblue; */
 }
-
-
-
-
-
-
 
 
 
