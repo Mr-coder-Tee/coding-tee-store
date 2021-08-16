@@ -33,8 +33,9 @@ body{
     display: flex;
     flex-wrap: wrap;
     padding: 0;
-    /* background: skyblue; */
 }
+
+/* -----card----- */
 
 .homecard{
     position: relative;
@@ -72,8 +73,6 @@ body{
     color: white;
     pointer-events: none;
     overflow: hidden;
-
-    /* z-index: 99; */
 }
 .btnView{
     color: black;
@@ -96,24 +95,26 @@ body{
     opacity: 1;
 }
 .title{
-    background: rgba(128, 255, 0, 0.781);
     position: relative;
     transition: 1s ease-in;
+    display: inline-block;
+    padding: 8px 12px;
 }
 .title::after{
     content: '';
-    width: 30%;
-    height: 2px;
+    width: 0%;
+    height: .5px;
     background: white;
-    position: absolute;
-    bottom: 0;
-    display: inline-block;
+    display:block;
+    margin: auto;
+    transition: 1.5s;
 }
 
-.homecard:hover .title{
-    /* text-decoration: underline; */
-
+.homecard:hover .title::after{
+    width: 100%;
 }
+/*x-----card-----x*/
+
 
 @media (max-width:800px) {
     .homecard{

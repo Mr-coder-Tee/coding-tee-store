@@ -14,7 +14,7 @@ export default makeStyles(()=>({
         flexWrap: "wrap",
         justifyContent: "center",
         width: "100%",
-        '&::after':{
+        '& ::after':{
             content: "",
             width: "100%",
             height: ".3px",

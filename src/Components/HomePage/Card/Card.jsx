@@ -1,14 +1,18 @@
 import React from 'react';
 import ai from '../../../Images/AI.jpg'
 
-const HomeCard = () => {
+
+
+const HomeCard = ({product}) => {
+    console.log("product:->",product);
+
     return ( 
         <div className="homecard">
             <div className="imgbx">
-                <img src={ai} alt="AI img" />
+                <img src={product.img} alt="AI-img" />
             </div>
             <div className="btnLabel">
-                <h3 className="title">AI</h3>
+                <h3 className="title">{product.category}</h3>
                 <button className="btnView">View Collection</button>
             </div>
         </div> );
