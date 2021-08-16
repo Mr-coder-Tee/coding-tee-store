@@ -14,11 +14,31 @@ const CollectionCard = ({product}) => {
     
     return ( 
             <div  className="collectioncard">
+
                 <div className="collectionImgbx">
                     <img src={arr[product.product_id]} alt="" />
                 </div>
                 <div className="productDetails">
                     <h3>{product.name}</h3>
+                    <div className="selectproperties">
+                        <div className="color">
+                            <span>color:</span>
+                            <ul className="colorlist">
+                                <li><span></span></li>
+                                <li><span></span></li>
+                                <li><span></span></li>
+                            </ul>
+                        </div>
+                        <div className="size">
+                            <span>size:</span>
+                            <ul className="sizelist">
+                                <li>S</li>
+                                <li>M</li>
+                                <li>L</li>
+                                <li>XL</li>
+                            </ul>
+                        </div>
+                    </div>
                     <div className="AddShoppingCart">
                         <p><strong>{product.price}</strong></p>
                         <AddShoppingCart className="addcart"/>

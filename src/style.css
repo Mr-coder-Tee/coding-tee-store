@@ -161,7 +161,7 @@ body{
     position: relative;
     top: 0;
     width: 300px; 
-    height: 350px;
+    height: 500px;
     margin: 10px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.349);
     border-radius: 10px;
@@ -209,6 +209,32 @@ body{
     background: skyblue;
     padding: 2px;
 }
+.color,.size{
+    display: flex;
+    align-items: center;
+}
+.colorlist,.sizelist{
+    display: flex;
+}
+.colorlist li{
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+.colorlist :nth-child(1){
+    background: white;
+}
+.colorlist :nth-child(2){
+    background: black;
+}
+.colorlist :nth-child(3){
+    background: cyan;
+}
+.sizelist li{
+    margin: 0 5px;
+}
 /* -------collections---------x */
 
 
@@ -227,7 +253,7 @@ body{
 @media (max-width:800px) {
     .homecard{
         width: 100%;
-        height: 70vh;
+        height: 50vh;
     }
     .btnView{
         transform: translateY(0%);
@@ -240,10 +266,16 @@ body{
 @media (max-width:700px) {
     .collectioncard{
         width: 350px; 
-        height: 400px;
+        height: 480px;
     }
 }
-@media (max-width:410px) {
+@media (max-width:500px) {
+    .collectionImgbx img{
+        height: 80%;
+    }
+    .productDetails{
+        opacity: 1;
+    }
    
 }
 
