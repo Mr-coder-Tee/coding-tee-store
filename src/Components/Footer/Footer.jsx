@@ -5,9 +5,9 @@ import cup from '../../Images/cup_java_icon.png'
 
 const Footer = ({products}) => {
     const classes=useStyles();
-    return ( 
+    return (  
         <div className={classes.footerContainer}>
-            <div className={classes.row}>
+            <div className={`row ${classes.row}`}>
                 <div className={classes.contactInfo}>
                     <div className={classes.logo}>
                         <img src={cup} alt="img"/>

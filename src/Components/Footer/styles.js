@@ -14,13 +14,6 @@ export default makeStyles(()=>({
         flexWrap: "wrap",
         justifyContent: "center",
         width: "100%",
-        '& ::after':{
-            content: "",
-            width: "100%",
-            height: ".3px",
-            background: "rgba(255, 255, 255, 0.247)",
-            margin: "5px 0",
-        },
     },
     copyRights:{
         display: "flex",

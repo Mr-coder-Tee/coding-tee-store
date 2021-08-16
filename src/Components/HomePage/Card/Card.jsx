@@ -1,5 +1,4 @@
 import React from 'react';
-import ai from '../../../Images/AI.jpg'
 
 
 
@@ -9,12 +8,13 @@ const HomeCard = ({product}) => {
     return ( 
         <div className="homecard">
             <div className="imgbx">
-                <img src={product.img} alt="AI-img" />
+                <img src={product.img} alt={product.category} />
             </div>
             <div className="btnLabel">
                 <h3 className="title">{product.category}</h3>
                 <button className="btnView">View Collection</button>
             </div>
+            <div className="black"/>
         </div> );
 }
  

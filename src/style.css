@@ -33,16 +33,15 @@ body{
     width: 100%;
     z-index: 300;
 }
+/* -----card----- */
 .homepageContainer{
     width: 100%;
     max-height: calc(100vh-68px);
-    /* border: 2px solid red; */
     display: flex;
     flex-wrap: wrap;
     padding: 0;
 }
 
-/* -----card----- */
 
 .homecard{
     position: relative;
@@ -62,7 +61,10 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: 50ms ease-in;
+    background: black;
 }
+
 
 .btnLabel{
     display: flex;
@@ -80,6 +82,8 @@ body{
     color: white;
     pointer-events: none;
     overflow: hidden;
+    z-index: 999;
+
 }
 .btnView{
     color: black;
@@ -96,6 +100,7 @@ body{
     cursor: pointer;
     transform: translateY(150%);
     opacity: 0;
+
 }
 .homecard:hover .btnView{
     transform: translateY(0%);
@@ -106,7 +111,9 @@ body{
     transition: 1s ease-in;
     display: inline-block;
     padding: 8px 12px;
+    color: white;
 }
+
 .title::after{
     content: '';
     width: 0%;
@@ -120,8 +127,97 @@ body{
 .homecard:hover .title::after{
     width: 100%;
 }
+.black{
+    position: absolute;
+    top: 0;
+    transition: 1s ease;
+    width: 100%;
+    height: 100%;
+}
+.homecard:hover .black {
+    background: rgba(0, 0, 0, 0.7);
+}
 /*x-----card-----x*/
 
+
+
+
+/* -------collections--------- */
+.collectionContainer{
+    width: 100%;
+    max-height: calc(100vh-68px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.collectioncard{
+    position: relative;
+    top: 0;
+    width: 300px; 
+    height: 350px;
+    margin: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.349);
+    border-radius: 10px;
+    font-family: 'Courier New', monospace;
+    overflow: hidden;
+}
+.collectionImgbx{
+    width: 100%;
+    height: 100%;
+}
+.collectionImgbx img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s ease-in;
+}
+.collectioncard:hover .collectionImgbx img{
+    height: 80%;
+}
+.productDetails{
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    bottom: 0;
+    padding: 10px;
+    opacity: 0;
+    transition: .5s;
+
+    /* background: coral;
+    z-index: 999; */
+}
+.collectioncard:hover .productDetails{
+    opacity: 1;
+}
+.AddShoppingCart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.addcart{
+    cursor: pointer;
+    transition: 1s ease-in;
+}
+.addcart:hover{
+    background: skyblue;
+    padding: 2px;
+}
+/* -------collections---------x */
+
+
+
+
+/* -----footer----- */
+.row::after{
+    content: "";
+    width: 100%;
+    height: .3px;
+    background: rgba(255, 255, 255, 0.247);
+    margin: 5px 0;
+}
+/* -----footer-----x */
 
 @media (max-width:800px) {
     .homecard{
@@ -132,12 +228,18 @@ body{
         transform: translateY(0%);
         opacity: 1;
     }
+    .black {
+        background: rgba(0, 0, 0, 0.7);
+    }
+}
+@media (max-width:700px) {
+    .collectioncard{
+        width: 350px; 
+        height: 400px;
+    }
 }
 @media (max-width:410px) {
-    /* .homecard{
-        width: 30px;
-        height: 40px;
-    } */
+   
 }
 
 

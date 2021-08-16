@@ -1,4 +1,3 @@
-import AI from './Images/AI.jpg';
 
 export const storeCollection=[
     {
