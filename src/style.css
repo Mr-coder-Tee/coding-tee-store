@@ -223,6 +223,7 @@ body{
     border: 1px solid black;
     border-radius: 50%;
 }
+
 .colorlist :nth-child(1){
     background: white;
 }
@@ -234,6 +235,9 @@ body{
 }
 .sizelist li{
     margin: 0 5px;
+}
+.sizelist li:hover{
+    color: #0026ff !important;
 }
 /* -------collections---------x */
 

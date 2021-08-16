@@ -11,7 +11,7 @@ export const productCollect=[
         price:"R120",
         decription:"my code works i don't know idea why.",
         img:{codeworksdesign},
-        size:["S","M","L","XL"],
+        size:["S","M","L"],
     },
     {
         id:1,
@@ -20,7 +20,7 @@ export const productCollect=[
         price:"R150",
         decription:"i convert coffee into code",
         img:{coffeedesign},
-        size:["S","M","L","XL"],
+        size:["S","M","XL"],
     },
     {
         id:2,
@@ -48,7 +48,7 @@ export const productCollect=[
         price:"R150",
         decription:"i convert coffee into code",
         img:{coffeedesign},
-        size:["S","M","L","XL"],
+        size:["S","XL"],
     },
     {
         id:5,
@@ -57,7 +57,7 @@ export const productCollect=[
         price:"R200",
         decription:"web developer (html,css,javascript) freelance project",
         img:{javascriptdesign},
-        size:["S","M","L","XL"],
+        size:["XL"],
     },
     {
         id:6,
@@ -66,6 +66,6 @@ export const productCollect=[
         price:"R120",
         decription:"my code works i don't know idea why.",
         img:{codeworksdesign},
-        size:["S","M","L","XL"],
+        size:["S","L","XL"],
     },
 ]

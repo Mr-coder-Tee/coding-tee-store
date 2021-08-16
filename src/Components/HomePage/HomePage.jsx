@@ -1,9 +1,7 @@
 import { Divider } from '@material-ui/core';
 import HomeCard from './Card/Card';
-import Footer from '../Footer/Footer';
 import SaleCountDown from './SalesCountDown/SaleCountDown';
 import Banner from './Banner/Banner';
-import Subcribe from './Subcribe/Subcribe';
 import React,{useState} from 'react';
 
 
@@ -25,8 +23,6 @@ const HomePage = ({products}) => {
                     ))
                 }
             </div>
-            <Subcribe/>
-            <Footer products={products}/>
         </div>
     );
 }

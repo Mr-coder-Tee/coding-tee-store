@@ -32,10 +32,10 @@ const CollectionCard = ({product}) => {
                         <div className="size">
                             <span>size:</span>
                             <ul className="sizelist">
-                                <li>S</li>
-                                <li>M</li>
-                                <li>L</li>
-                                <li>XL</li>
+                                {console.log("size",product.size)}
+                                {product.size.map((size)=>(
+                                    <li>{size}</li>
+                                ))}
                             </ul>
                         </div>
                     </div>
