@@ -13,7 +13,7 @@ export default makeStyles(()=>({
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "center",
-        width: "100%",
+        width: "100%", 
     },
     copyRights:{
         display: "flex",
@@ -102,6 +102,7 @@ export default makeStyles(()=>({
     legal:{
         padding: "20px",
         margin: "0 20px",
+        width:"100%",
     },
 
 }));

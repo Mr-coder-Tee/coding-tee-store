@@ -227,7 +227,7 @@ body{
 @media (max-width:800px) {
     .homecard{
         width: 100%;
-        height: 80vh;
+        height: 70vh;
     }
     .btnView{
         transform: translateY(0%);
