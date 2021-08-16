@@ -3,11 +3,7 @@ import useStyles from './styles'
 import { WbSunnyOutlined,Brightness2Outlined } from '@material-ui/icons';
 import cup from '../../Images/cup_java_icon.png'
 
-
-
-
-
-const Footer = () => {
+const Footer = ({products}) => {
     const classes=useStyles();
     return ( 
         <div className={classes.footerContainer}>
@@ -30,19 +26,11 @@ const Footer = () => {
                     <div className={classes.FooterCollections}>
                         <h2>Collections</h2>
                         <ul>
-                            <li>AI</li>
-                            <li>Data science</li>
-                            <li>OS</li>
-                            <li>Algorithms</li>
-                            <li>AI</li>
-                            <li>Data science</li>
-                            <li>OS</li>
-                            <li>Algorithms</li>
-                            <li>Algorithms</li>
-                            <li>AI</li>
-                            <li>Data science</li>
-                            <li>OS</li>
-                            <li>Algorithms</li>
+                            {
+                                products.map((categories)=>(
+                                    <li>{categories.category}</li>
+                                ))
+                            }
                         </ul>
                     </div>
                     <div className={classes.legal}>
@@ -62,12 +50,12 @@ const Footer = () => {
                     <span>&copy;2021 Coding Tee.</span>
                 </div>
                 <div>
-                    <WbSunnyOutlined/>
                     <Brightness2Outlined/>
                 </div>
             </div>
         </div> 
     );
 }
- 
+
+/* <WbSunnyOutlined/> light */
 export default Footer;

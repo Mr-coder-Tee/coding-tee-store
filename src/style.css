@@ -18,6 +18,13 @@
     list-style: none;
     text-decoration: none;
 }
+li{
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+li:hover{
+    color: #FFF7B6;
+}
 body{
     position: relative;
 }
@@ -127,10 +134,10 @@ body{
     }
 }
 @media (max-width:410px) {
-    .homecard{
+    /* .homecard{
         width: 30px;
         height: 40px;
-    }
+    } */
 }
 
 
