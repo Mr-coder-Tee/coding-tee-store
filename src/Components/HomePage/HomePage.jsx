@@ -15,7 +15,7 @@ const HomePage = ({products}) => {
     }
 
     return (
-        <div>
+        <div className="homepage">
             <Banner/>
             <SaleCountDown/>
             <div className="homepageContainer">

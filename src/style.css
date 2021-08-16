@@ -41,7 +41,10 @@ body{
     flex-wrap: wrap;
     padding: 0;
 }
+.homepage{
+    border: 2px solid red;
 
+}
 
 .homecard{
     position: relative;
