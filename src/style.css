@@ -36,10 +36,12 @@ body{
 /* -----card----- */
 .homepageContainer{
     width: 100%;
-    max-height: calc(100vh-68px);
+    min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
     padding: 0;
+    border: 2px solid blue;
+
 }
 .homepage{
     border: 2px solid red;
