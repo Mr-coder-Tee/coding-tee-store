@@ -40,13 +40,13 @@ body{
     display: flex;
     flex-wrap: wrap;
     padding: 0;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
 
 }
-.homepage{
+/* .homepage{
     border: 2px solid red;
 
-}
+} */
 
 .homecard{
     position: relative;
