@@ -14,6 +14,7 @@ export default makeStyles(()=>({
         flexWrap: "wrap",
         justifyContent: "center",
         width: "100%", 
+
     },
     copyRights:{
         display: "flex",
@@ -22,6 +23,7 @@ export default makeStyles(()=>({
         minHeight: "20%",
     },
     contactInfo:{
+
     },
     contactdetails:{
         margin: "10px",
@@ -92,17 +94,20 @@ export default makeStyles(()=>({
     footerother:{
         display: "flex",
         flexWrap: "wrap",
-        justifyContent: "center",
+        width:"70%",
+        // justifyContent: "center", 
         padding: "10px",
+
     },
     FooterCollections:{
         padding: "20px",
         margin: "0 20px",
+
     },
     legal:{
         padding: "20px",
         margin: "0 20px",
-        width:"100%",
+        width:"40%",
     },
 
 }));

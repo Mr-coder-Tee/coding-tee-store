@@ -59,55 +59,58 @@ function SaleCountDown() {
 
 
   return (
-      <div className="flex-display">
-    <div className="card">
-        <div className="header">
-            <h3>Count Down To Greant opening</h3>
-            <p>We are some time away from opeing in the mean time check out our collection.</p>
+      <div className="sale">
+        <div className="saleBanner">
+            <h1>Coding Tshirts</h1>
         </div>
-        <div className="timer-container">
-
-            <div className="timer-element">
-                <div className="timebx">
-                    <span className="time">{day}</span>
-                </div>
-                <div className="timetype">
-                    <small>Days</small>
-                </div>
+        <div className="countdowncard">
+            <div className="header">
+                <h3>Count Down To Grand opening</h3>
+                <p>We are some time away from opeing in the mean time check out our collection.</p>
             </div>
-            <div className="mark"><h1>:</h1></div>
-            <div className="timer-element">
-                <div className="timebx">
-                    <span className="time">{hour}</span>
-                </div>
-                <div className="timetype">
-                    <small>hours</small>
-                </div>
-            </div>
+            <div className="timer-container">
 
-            <div className="mark"><h1>:</h1></div>
-            
-            <div className="timer-element">
-                <div className="timebx">
-                    <span className="time">{minute}</span>
+                <div className="timer-element">
+                    <div className="timebx">
+                        <span className="time">{day}</span>
+                    </div>
+                    <div className="timetype">
+                        <small>Days</small>
+                    </div>
                 </div>
-                <div className="timetype">
-                    <small>minutes</small>
+                <div className="mark"><span>:</span></div>
+                <div className="timer-element">
+                    <div className="timebx">
+                        <span className="time">{hour}</span>
+                    </div>
+                    <div className="timetype">
+                        <small>hours</small>
+                    </div>
                 </div>
-            </div>
 
-            <div className="mark"><h1>:</h1></div>
-
-            <div className="timer-element">
-                <div className="timebx">
-                    <span className="time">{second}</span>
+                <div className="mark"><span>:</span></div>
+                
+                <div className="timer-element">
+                    <div className="timebx">
+                        <span className="time">{minute}</span>
+                    </div>
+                    <div className="timetype">
+                        <small>minutes</small>
+                    </div>
                 </div>
-                <div className="timetype">
-                    <small>Seconds</small>
+
+                <div className="mark"><span>:</span></div>
+
+                <div className="timer-element">
+                    <div className="timebx">
+                        <span className="time">{second}</span>
+                    </div>
+                    <div className="timetype">
+                        <small>Seconds</small>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
   );
 }

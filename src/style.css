@@ -242,6 +242,78 @@ body{
 /* -------collections---------x */
 
 
+/* ----------count down---------- */
+.sale{
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    color: white;
+    background: black;
+}
+.saleBanner,.countdowncard{
+    width: 50vh;
+    height: 50vh;
+    margin: 5px;
+}
+.timer-container{
+    display: flex;
+}
+.countdowncard{
+
+}
+.timer-element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f8eb8a;
+    min-width: 50px;
+    min-height: 50px;
+    padding: 0 5px;
+}
+.sale span{
+    font-size: 3em;
+}
+/* ----------count down----------x */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* -----footer----- */
@@ -265,6 +337,9 @@ body{
     }
     .black {
         background: rgba(0, 0, 0, 0.7);
+    }
+    .saleBanner,.countdowncard{
+        width: 80%;
     }
 }
 @media (max-width:700px) {
