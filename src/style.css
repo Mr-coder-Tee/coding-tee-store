@@ -11,6 +11,8 @@
     --SecondaryColor:red;
     --NavBarColor:rgba(0, 0, 0, 1);
 }
+
+/* -----------------Global css------------------ */
 *{
     padding: 0;
     margin: 0;
@@ -18,6 +20,12 @@
     list-style: none;
     text-decoration: none;
 }
+.flexCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 li{
     margin-bottom: 10px;
     cursor: pointer;
@@ -33,6 +41,23 @@ body{
     width: 100%;
     z-index: 300;
 }
+
+/* -----------------Global css------------------x */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* -----card----- */
 .homepageContainer{
     width: 100%;
@@ -277,6 +302,39 @@ body{
     font-size: 3em;
 }
 /* ----------count down----------x */
+
+
+
+
+
+/* ----------bannner---------- */
+.bannerContainer{
+    width: 100%;
+    height: 80vh;
+}
+/* ----------bannner----------x */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------subcribe---------------- */
+.subContainer{
+    width: 100%;
+    height: 50vh;
+}
+/* ---------------subcribe----------------x */
+
 
 
 

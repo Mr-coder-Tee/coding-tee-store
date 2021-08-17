@@ -5,7 +5,7 @@ import * as Yup from 'yup';
 
 const Subcribe = () => {
     return ( 
-            <div className="subContainer">
+            <div className="subContainer flexCenter">
                 <div className="SubForm">
                     <Formik
                         initialValues={{
