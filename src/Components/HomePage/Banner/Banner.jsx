@@ -13,7 +13,7 @@ const Banner = () => {
                     <p>place your order online and recieve free shipping anywhere in South Africa</p>
                     <a href="#">T's and C's Apply</a>
                     <div className="btnContainer">
-                        <button className="btnView">View All Collections</button>
+                        <button className="btn">View All Collections</button>
                     </div>
                 </div>
                 <div className="ImgCover"/>

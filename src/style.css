@@ -49,8 +49,25 @@ body{
     z-index: 300;
 }
 
-/* -----------------Global css------------------x */
+.btn{
+    color: black;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: 900;
+    outline: none;
+    background: #FFF7B6;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .5s ease;
+    border: 1px solid #f8eb8a;
+}
 
+.btn:hover{
+    background: transparent;
+    color: #f8eb8a;
+}
+/* -----------------Global css------------------x */
 
 
 
@@ -344,6 +361,10 @@ body{
 .content a{
     margin: 20px 0;
     color: #f8eb8a;
+}
+.content p{
+    font-size: 1em;
+    margin: 10px 0;
 }
 .ImgCover{
     position: absolute;
