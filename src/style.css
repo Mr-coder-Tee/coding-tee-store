@@ -230,7 +230,7 @@ body{
 /* -------collections--------- */
 .collectionContainer{
     width: 100%;
-    max-height: calc(100vh-68px);
+    min-height: calc(100vh-68px);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
