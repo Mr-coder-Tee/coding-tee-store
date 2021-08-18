@@ -1,4 +1,5 @@
 import React from 'react';
+import CartCard from './CartCard/CartCard'
 
 
 
@@ -9,8 +10,13 @@ const Cart = () => {
             <div className="cartheading">
                 <h1>Your cart</h1>
             </div>
+            <div className="cardCards">
 
-
+                <CartCard/>
+                <CartCard/>
+                <CartCard/>
+                <CartCard/>
+            </div>
             <div className="cartProperties">
                 <div className="cartTotals">
                     <h3>Subtotal:</h3>
