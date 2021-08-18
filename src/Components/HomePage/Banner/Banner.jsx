@@ -14,7 +14,7 @@ const Banner = () => {
       </div>
       <div className="content">
         <h1>
-          <span className="if">if</span> <span className="brackets">(</span> you
+          <span className="if">if</span> <span className="brackets">(</span>
           like to code? <span className="brackets">)</span>
           <br />
           then it is time to show off your super powers.
