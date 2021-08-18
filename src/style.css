@@ -697,7 +697,10 @@ body{
     .productDetails{
         opacity: 1;
     }
-   
+    .CartCardContainer{
+        width: 430px;
+        height: 410px;
+    }
 }
 
 
