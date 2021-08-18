@@ -32,6 +32,21 @@
     justify-content: center;
     align-items: center;
 }
+.flex-colonm{
+    flex-direction: column;
+}
+.mT-5{
+    margin-top: 5px;
+}
+.mT-10{
+    margin-top: 5px;
+}
+.mT-15{
+    margin-top: 15px;
+}
+.mT-20{
+    margin-top: 20px;
+}
 
 li{
     margin-bottom: 10px;
@@ -67,7 +82,18 @@ body{
     background: transparent;
     color: #f8eb8a;
 }
-/* -----------------Global css------------------x */
+/* -----------------Global css------------------x *
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -401,6 +427,42 @@ body{
 .subContainer{
     width: 100%;
     height: 50vh;
+    background: url('https://images.unsplash.com/photo-1513708929605-6dd0e1b081bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=755&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.SubForm{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-holder{
+    width: 80%;
+    font-family: var(--FiraCodefontfamily);
+    color: white;
+}
+.subcText{
+    text-align: center;
+}
+.input{
+    padding: 10px 50px;
+    border-radius: 5px;
+    background: #FFF7B6;
+    transition: .5s;
+    font-family: var(--FiraCodefontfamily);
+    font-size: 1.1em;
+    outline: none;
+}
+.input:focus{
+    background: white;
+}
+.btnfont{
+    font-family: var(--FiraCodefontfamily);
 }
 /* ---------------subcribe----------------x */
 
