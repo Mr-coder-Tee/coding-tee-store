@@ -16,6 +16,14 @@ const Cart = () => {
                 <CartCard/>
                 <CartCard/>
                 <CartCard/>
+                <CartCard/>
+                <CartCard/>
+                <CartCard/>
+                <CartCard/>
+                <CartCard/>
+                <CartCard/>
+                <CartCard/>
+                <CartCard/>
             </div>
             <div className="cartProperties">
                 <div className="cartTotals">

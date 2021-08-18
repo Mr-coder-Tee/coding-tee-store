@@ -13,6 +13,9 @@ DATA SCIENCE:https://unsplash.com/photos/1K6IQsQbizI?utm_source=unsplash&utm_med
 web-dev:https://unsplash.com/photos/Xr1Lwph6eGI?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
 Developer:https://unsplash.com/photos/6sAl6aQ4OWI?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
 https://unsplash.com/photos/UTk9cXzYWAg?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
+https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80
+https://images.unsplash.com/photo-1513708929605-6dd0e1b081bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=755&q=80
+
 Icons:
 
 
