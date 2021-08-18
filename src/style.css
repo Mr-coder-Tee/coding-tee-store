@@ -4,6 +4,13 @@
     --CormorantGaramond: 'Cormorant Garamond', serif;
     --Rajdhani: 'Rajdhani', sans-serif;
     --SourceCodePro: 'Source Code Pro', monospace;
+
+    /* coding fonts */
+    --AnonymousProfontfamily: 'Anonymous Pro', monospace;
+    --FiraCodefontfamily: 'Fira Code', monospace;
+    --SourceCodeProfontfamily: 'Source Code Pro', monospace;
+    --UbuntuMonofontfamily: 'Ubuntu Mono', monospace;
+
     
     /* colors */
     --MainColor:white;
@@ -79,7 +86,6 @@ body{
     width: calc(25% - 0px);
     color: white;
     margin: 0 auto;
-    cursor: pointer;
     z-index: 999;
 }
 
@@ -110,7 +116,6 @@ body{
     padding: 10px 0;
     margin: 0 auto;
     color: white;
-    pointer-events: none;
     overflow: hidden;
     z-index: 999;
 
@@ -310,9 +315,10 @@ body{
 /* ----------bannner---------- */
 .bannerContainer{
     width: 100%;
-    height: 80vh;
+    height: 90vh;
     position: relative;
     color: white;
+
 }
 .backgroundImg{
     width: 100%;
@@ -321,18 +327,38 @@ body{
 .backgroundImg img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 .content{
+    text-align: center;
     position: absolute;
-
     z-index: 999;
+}
+.content h1{
+    font-size: 2em;
+    font-family: var(--Rajdhani);
+}
+.content h1 strong{
+    color: rgba(165, 42, 42, 0.726);
+}
+.content a{
+    margin: 20px 0;
+    color: #f8eb8a;
 }
 .ImgCover{
     position: absolute;
+
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.808);
+    background: rgba(0, 0, 0, 0.7);
 
+}
+.if{
+    color: green;
+    font-family: var(--UbuntuMonofontfamily);
+}
+.brackets{
+    color: blue;
 }
 /* ----------bannner----------x */
 

@@ -11,7 +11,7 @@ const HomePage = ({products}) => {
     const getCollectionID=(_id)=>{
         setId(_id);
     }
-
+    
     return (
         <div className="homepage">
             <Banner/>
@@ -19,7 +19,7 @@ const HomePage = ({products}) => {
             <div className="homepageContainer">
                 {
                     products.map((product)=>(
-                        <HomeCard key={product.id} product={product}/>
+                        <HomeCard  key={product.id} product={product}/>
                     ))
                 }
             </div>
