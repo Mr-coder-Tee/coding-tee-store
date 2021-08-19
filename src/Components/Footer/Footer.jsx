@@ -12,7 +12,7 @@ const Footer = ({products}) => {
                     <div className={classes.logo}>
                         <img src={cup} alt="img"/>
                         <h1>Coding Tee</h1>
-                    </div>
+                    </div> 
                     <div className={classes.contactdetails}>
                         <i class="fa fa-twitter" ></i>
                         <i class="fa fa-facebook" ></i>

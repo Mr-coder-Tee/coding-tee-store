@@ -5,7 +5,7 @@ import HomePage from "./Components/HomePage/HomePage";
 import Collection from "./Components/Collections/Collection";
 import Footer from "./Components/Footer/Footer";
 import Subcribe from "./Components/HomePage/Subcribe/Subcribe";
-
+import { commerce } from "./lib/commerce";
 import "./style.css";
 import { storeCollection } from "./data";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
