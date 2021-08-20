@@ -472,6 +472,9 @@ body{
 .btnfont{
     font-family: var(--FiraCodefontfamily);
 }
+.error{
+    color: #d9534f;
+}
 /* ---------------subcribe----------------x */
 
 
