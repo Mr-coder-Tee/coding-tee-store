@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 
 const HomeCard = ({product}) => {
-    console.log("product:->",product);
 
     return ( 
         <div className="homecard">

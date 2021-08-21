@@ -47,5 +47,13 @@ export default makeStyles(()=>({
             color:"black",
         },
     },
+    logobtn:{
+        background:"transparent",
+        border:"none",
+        display: "flex",
+        justifyContent:"center",
+        alignItems: "center",
+        cursor: "pointer",
+    },
 
 }));

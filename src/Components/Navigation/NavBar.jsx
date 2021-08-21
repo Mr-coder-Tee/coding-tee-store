@@ -5,18 +5,20 @@ import { ShoppingCart, ShoppingBasket } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import useStyles from "./style";
 
-const NavBar = ({totalItems}) => {
+const NavBar = ({ totalItems }) => {
   const classes = useStyles();
   return (
     <div className={classes.NavContainer}>
       <div className={classes.NavContainerLogo}>
-        <img src={cup} alt="img" />
-        <h2>Coding Tee</h2>
+        <IconButton class={classes.logobtn} component={Link} to="/">
+          <img src={cup} alt="img" />
+          <h2>Coding Tee</h2>
+        </IconButton>
       </div>
       <div className="cart-btn">
         <IconButton
           component={Link}
-          to='/cart'
+          to="/cart"
           aria-label="show cart item"
           className={classes.btn}
         >

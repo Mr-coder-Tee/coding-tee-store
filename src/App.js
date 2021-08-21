@@ -32,7 +32,6 @@ function App() {
     getCart();
   }, []);
 
-  console.log("cart----->", cart);
 
   return (
     <Router>

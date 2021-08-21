@@ -1,16 +1,10 @@
 import React from "react";
 import { AddShoppingCart } from "@material-ui/icons";
 import useStyles from "./styles";
-
-import codeworksdesign from "./codeworksdesign.jpeg";
-import coffeedesign from "./coffeedesign.jpeg";
-import javascriptdesign from "./javascriptdesign.jpeg";
 import { IconButton } from "@material-ui/core";
-const arr = [codeworksdesign, coffeedesign, javascriptdesign];
 
 const CollectionCard = ({ product, handleAddToCart }) => {
   const classes = useStyles();
-  // console.log("product----->",product);
 
   return (
     <div className="collectioncard">
@@ -45,6 +39,7 @@ const CollectionCard = ({ product, handleAddToCart }) => {
           </p>
           <IconButton
             class="addcart"
+            aria-label="add to cart"
             onClick={() => handleAddToCart(product.id, 1)}
           >
             <AddShoppingCart />
