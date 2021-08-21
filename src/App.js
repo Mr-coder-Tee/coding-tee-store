@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from "./Components/Navigation/NavBar";
 import Cart from "./Components/Cart/Cart";
 import HomePage from "./Components/HomePage/HomePage";
@@ -10,9 +10,25 @@ import "./style.css";
 import { storeCollection } from "./data";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-const products = storeCollection;
-
 function App() {
+  const [products, SetProducts] = useState([]);
+  const [cart, setCart] = useState({});
+
+  const getProducts = async () => {
+    const { data } = await commerce.products.list();
+    SetProducts(data);
+  };
+  const getCart = async () => {
+    setCart(await commerce.cart.retrieve());
+  };
+
+  useEffect(() => {
+    getProducts();
+    getCart();
+  }, []);
+
+console.log('cart----->',cart);
+
   return (
     <Router>
       <div className="App-container">
@@ -28,7 +44,7 @@ function App() {
           </Route>
 
           <Route exact path="/collection">
-            <Collection />
+            <Collection products={products} />
           </Route>
         </Switch>
         <Subcribe />

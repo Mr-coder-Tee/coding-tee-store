@@ -11,12 +11,13 @@ const arr=[codeworksdesign,coffeedesign,javascriptdesign]
 const CollectionCard = ({product}) => {
 
     const classes=useStyles();
-    
+    // console.log("product----->",product);
+     
     return ( 
             <div  className="collectioncard">
 
                 <div className="collectionImgbx">
-                    <img src={arr[product.product_id]} alt="" />
+                    <img src={product.media.source} alt="" />
                 </div>
                 <div className="productDetails">
                     <h3>{product.name}</h3>
@@ -24,23 +25,26 @@ const CollectionCard = ({product}) => {
                         <div className="color">
                             <span>color:</span>
                             <ul className="colorlist">
-                                <li><span></span></li>
-                                <li><span></span></li>
-                                <li><span></span></li>
+                                    {
+                                        product.variant_groups[0].options.map((size)=>(
+                                            <button key={size.id} className="sizeBtn"/>
+                                        ))
+                                    }
                             </ul>
                         </div>
                         <div className="size">
                             <span>size:</span>
-                            <ul className="sizelist">
-                                {console.log("size",product.size)}
-                                {product.size.map((size)=>(
-                                    <li>{size}</li>
-                                ))}
-                            </ul>
+                            <div className="sizelist">
+                                {
+                                    product.variant_groups[1].options.map((size)=>(
+                                        <button key={size.id} className="sizeBtn">{size.name}</button>
+                                    ))
+                                }
+                            </div>
                         </div>
                     </div>
                     <div className="AddShoppingCart">
-                        <p><strong>{product.price}</strong></p>
+                        <p><strong>price:{product.price.formatted_with_symbol}</strong></p>
                         <AddShoppingCart className="addcart"/>
                     </div>
                 </div>

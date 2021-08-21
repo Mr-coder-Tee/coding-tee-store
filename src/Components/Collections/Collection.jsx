@@ -3,20 +3,19 @@ import {productCollect} from './CollectionCard/data'
 
 import CollectionCard from './CollectionCard/CollectionCard';
 
-const collection=productCollect;
 
-console.log("collection",collection);
-
-const Collection = () => {
+const Collection = ({products}) => {
     return ( 
             <div className="collectionContainer">
                 {
-                    collection.map((product)=>(
-                        <CollectionCard key={product.id} product={product} />
+                    products.map((product)=>(
+                        <div key={product.id}>
+                            <CollectionCard product={product} />
+                        </div>
                     ))
                 }
             </div> 
         );
 }
- 
+  
 export default Collection;
