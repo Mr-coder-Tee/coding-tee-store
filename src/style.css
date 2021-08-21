@@ -280,14 +280,21 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 5px;
+    
 }
 .addcart{
     cursor: pointer;
-    transition: 1s ease-in;
+    transition: .5s ease-in;
+    border: none;
+    background: transparent;
+    padding: 5px;
+    border-radius: 50%;
 }
 .addcart:hover{
-    background: skyblue;
-    padding: 2px;
+    background: rgb(83, 187, 228);
+    color: white;
+
 }
 .color,.size{
     display: flex;

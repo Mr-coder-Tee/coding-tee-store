@@ -22,12 +22,17 @@ function App() {
     setCart(await commerce.cart.retrieve());
   };
 
+  const handleAddToCart = async (productId, quantity) => {
+    const item = await commerce.cart.add(productId, quantity);
+    setCart(item.cart);
+  };
+
   useEffect(() => {
     getProducts();
     getCart();
   }, []);
 
-console.log('cart----->',cart);
+  console.log("cart----->", cart);
 
   return (
     <Router>
@@ -44,7 +49,7 @@ console.log('cart----->',cart);
           </Route>
 
           <Route exact path="/collection">
-            <Collection products={products} />
+            <Collection products={products} handleAddToCart={handleAddToCart} />
           </Route>
         </Switch>
         <Subcribe />
