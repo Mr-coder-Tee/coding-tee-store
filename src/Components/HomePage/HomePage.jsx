@@ -3,13 +3,16 @@ import HomeCard from "./Card/Card";
 import SaleCountDown from "./SalesCountDown/SaleCountDown";
 import Banner from "./Banner/Banner";
 import React, { useState } from "react";
+import { storeCollection } from "../../data";
 
-const HomePage = ({ products }) => {
+
+
+const HomePage = () => {
   const [id, setId] = useState();
   const getCollectionID = (_id) => {
     setId(_id);
   };
-
+  const products=storeCollection;
   return (
     <div className="homepage">
       <Banner />

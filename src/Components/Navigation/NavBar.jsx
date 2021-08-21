@@ -5,7 +5,7 @@ import { ShoppingCart, ShoppingBasket } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import useStyles from "./style";
 
-const NavBar = () => {
+const NavBar = ({totalItems}) => {
   const classes = useStyles();
   return (
     <div className={classes.NavContainer}>
@@ -20,7 +20,7 @@ const NavBar = () => {
           aria-label="show cart item"
           className={classes.btn}
         >
-          <Badge badgeContent={5}>
+          <Badge badgeContent={totalItems}>
             <ShoppingCart />
           </Badge>
         </IconButton>
