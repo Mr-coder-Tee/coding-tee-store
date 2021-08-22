@@ -22,8 +22,12 @@ function App() {
     setCart(await commerce.cart.retrieve());
   };
 
-  const handleAddToCart = async (productId, quantity) => {
-    const item = await commerce.cart.add(productId, quantity);
+  const handleAddToCart = async (productId, quantity,color,colorGroupId,size,sizeGroupId) => {
+    
+    console.log("color",color,colorGroupId);
+    console.log("size",size,sizeGroupId);
+    const item = await commerce.cart.add(productId, quantity,{colorGroupId:color,sizeGroupId:size})
+                .catch((err)=>{console.log("error--",err)});
     setCart(item.cart);
   };
 
@@ -32,6 +36,7 @@ function App() {
     getCart();
   }, []);
 
+  console.log(cart)
 
   return (
     <Router>
