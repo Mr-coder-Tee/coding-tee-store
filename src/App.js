@@ -87,7 +87,7 @@ function App() {
             <Collection products={products} handleAddToCart={handleAddToCart} />
           </Route>
           <Route exact path="/checkout">
-              <Checkout/>
+              <Checkout cart={cart}/>
           </Route>
         </Switch>
         <Subcribe />
