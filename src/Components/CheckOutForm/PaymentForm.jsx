@@ -10,20 +10,21 @@ const PaymentForm = ({ setShippingData, checkoutToken,backStep,handleCaptureChec
 
         const orderData={
             line_item:checkoutToken.live.line_items,
-            customer:{firstname:setShippingData.firstname,lastname:setShippingData.lastname,email:setShippingData.email},
+            customer:{firstname:"setShippingData.firstname",lastname:"setShippingData.lastname",email:"mamtimeofentje@gmail.com"},
             shipping:{name:'primary',
-                     street:setShippingData.address1,
-                     suburb:setShippingData.address2,
-                     town_city:setShippingData.city,
-                     province:setShippingData.province,
-                     shipping_country:"South Africa",
-                     postal_zip:setShippingData.zip},
-            fulfillment:{shipping_method:setShippingData.shippingOption},
+                     street:"setShippingData.address1",
+                     suburb:"setShippingData.address2",
+                     town_city:"setShippingData.city",
+                     province:"setShippingData.province",
+                     country: 'ZA',
+                     postal_zip:"0784"},
+            fulfillment:{shipping_method:"setShippingData.shippingOption"},
             payment:{
                 gateway:'manual',
                 manual:{
                     id:'gway_joPZk8OkaqRple'
                 },
+                pay_what_you_want: '149.99'
             }
         }
         handleCaptureCheckout(checkoutToken.id,orderData)
@@ -85,3 +86,29 @@ const PaymentForm = ({ setShippingData, checkoutToken,backStep,handleCaptureChec
 };
 
 export default PaymentForm;
+
+
+
+
+
+// customer:{firstname:setShippingData.firstname,lastname:setShippingData.lastname,email:setShippingData.email},
+// shipping:{name:'primary',
+//          street:setShippingData.address1,
+//          suburb:setShippingData.address2,
+//          town_city:setShippingData.city,
+//          province:setShippingData.province,
+//          postal_zip:setShippingData.zip},
+// fulfillment:{shipping_method:setShippingData.shippingOption},
+// payment:{
+//     gateway:'manual',
+//     manual:{
+//         id:'gway_joPZk8OkaqRple'
+//     },
+// }
+
+
+// -------------------
+
+
+
+
