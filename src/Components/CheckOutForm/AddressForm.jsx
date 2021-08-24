@@ -36,6 +36,7 @@ const AddressForm = ({ checkoutToken,next }) => {
               className="design-primary"
               type="submit"
               variant="contained"
+              color="primary"
             >
               Next
             </Button>

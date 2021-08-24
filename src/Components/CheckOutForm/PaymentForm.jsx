@@ -1,7 +1,27 @@
 import React from "react";
 import Review from "./Review";
+import { Button } from "@material-ui/core";
 
-const PaymentForm = ({ setShippingData, checkoutToken }) => {
+const PaymentForm = ({ setShippingData, checkoutToken,backStep }) => {
+
+    const handleSubmit=()=>{
+
+        const orderData={
+            line_item:checkoutToken.live.line_items,
+            customer:{firstname:setShippingData.firstname,lastname:setShippingData.lastname,email:setShippingData.email},
+            shipping:{name:'primary',
+                     street:setShippingData.address1,
+                     suburb:setShippingData.address2,
+                     town_city:setShippingData.city,
+                     province:setShippingData.province,
+                     postal_zip:setShippingData.zip},
+            fulfillment:{shipping_method:setShippingData.shippingOption},
+            payment:{
+                method:'Direct'
+            }
+        }
+    }
+
   return (
     <div>
       <Review checkoutToken={checkoutToken} />
@@ -43,6 +63,13 @@ const PaymentForm = ({ setShippingData, checkoutToken }) => {
             <td>NO</td>
           </tr>
         </table>
+      </div>
+      <div style={{display:'flex',justifyContent:'space-between' ,marginTop:'10px'}}>
+
+        <Button variant="outlined" onClick={backStep}>Back</Button>
+        <Button variant="contained" color="primary">
+            Pay {checkoutToken.live.subtotal.formatted_with_symbol}
+        </Button>
       </div>
     </div>
   );
