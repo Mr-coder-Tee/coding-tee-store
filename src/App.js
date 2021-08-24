@@ -59,6 +59,8 @@ function App() {
     setCart(cart);
   };
 
+  
+
   // X----------Fuctions----------X
 
   useEffect(() => {
