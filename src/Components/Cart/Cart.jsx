@@ -1,6 +1,7 @@
 import React from "react";
 import CartCard from "./CartCard/CartCard";
 import { Link } from "react-router-dom";
+import { Button } from "@material-ui/core";
 
 const Cart = ({ cart,handleUpdateCartQty,handleRemoveFromCart,handleEmptyCart }) => {
 
@@ -29,12 +30,12 @@ const Cart = ({ cart,handleUpdateCartQty,handleRemoveFromCart,handleEmptyCart })
           <h4>{cart.subtotal.formatted_with_symbol}</h4>
         </div>
         <div className="buttonsHolder">
-          <button className="design-danger btnSize mag design" onClick={handleEmptyCart}>
+          <Button type="button" size="large" class="design-danger btnSize mag design" onClick={handleEmptyCart}>
             Empty cart
-          </button>
-          <button className="design-primary btnSize mag design">
+          </Button>
+          <Button type="button" size="large" component={Link} to="/checkout"  class="design-primary btnSize mag design">
             CheckOut
-          </button>
+          </Button>
         </div>
       </div>
     </>
@@ -48,7 +49,7 @@ const Cart = ({ cart,handleUpdateCartQty,handleRemoveFromCart,handleEmptyCart })
       <div className="cartheading">
         <h1>Your cart</h1>
       </div>
-      {!cart.line_items.length ? <EmptyCart/> : <FilledCart/>}
+      {cart.line_items.length===0 ? <EmptyCart/> : <FilledCart/>}
     </div>
   );
 };

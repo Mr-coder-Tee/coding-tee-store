@@ -5,6 +5,8 @@ import HomePage from "./Components/HomePage/HomePage";
 import Collection from "./Components/Collections/Collection";
 import Footer from "./Components/Footer/Footer";
 import Subcribe from "./Components/HomePage/Subcribe/Subcribe";
+
+import Checkout from "./Components/CheckOutForm/CheckOut/checkout";
 import { commerce } from "./lib/commerce";
 import "./style.css";
 import { storeCollection } from "./data";
@@ -37,7 +39,7 @@ function App() {
     console.log("color", color, colorGroupId);
     console.log("size", size, sizeGroupId);
     const item = await commerce.cart
-      .add(productId, quantity, { colorGroupId: color, sizeGroupId: size })
+      .add(productId, quantity)//, { colorGroupId: color, sizeGroupId: size }
       .catch((err) => {
         console.log("error--", err);
       });
@@ -83,6 +85,9 @@ function App() {
 
           <Route exact path="/collection">
             <Collection products={products} handleAddToCart={handleAddToCart} />
+          </Route>
+          <Route exact path="/checkout">
+              <Checkout/>
           </Route>
         </Switch>
         <Subcribe />

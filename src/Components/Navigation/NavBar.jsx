@@ -18,7 +18,7 @@ const NavBar = ({ totalItems }) => {
         </IconButton>
       </div>
       <div className="cart-btn">
-        {location.pathname === "/" && (
+        {(location.pathname === "/collection"||location.pathname === "/") && (
           <IconButton
             component={Link}
             to="/cart"

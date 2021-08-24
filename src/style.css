@@ -658,7 +658,28 @@ body{
 
 
 
+/* -------checkout------------- */
 
+.toolbar{
+    margin: 10px 0;
+    padding: 0 30px;
+}
+.layout{
+
+}
+.paper{
+
+}
+.CheckOutheader{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+}
+.stepper{
+    padding: 10px 20px;
+}
+/* -------checkout-------------x */
 
 
 
