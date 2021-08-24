@@ -27,6 +27,14 @@
     list-style: none;
     text-decoration: none;
 }
+table{
+    width: 100%;
+    border: 1px solid black;
+}
+.red{
+    color: #d9534f;
+    text-align: center;
+}
 .flexCenter{
     display: flex;
     justify-content: center;
@@ -52,9 +60,9 @@ li{
     margin-bottom: 10px;
     cursor: pointer;
 }
-li:hover{
+/* li:hover{
     color: #FFF7B6;
-}
+} */
 body{
     position: relative;
 }
@@ -670,7 +678,7 @@ body{
 .paper{
 
 }
-.CheckOutheader{
+.CheckOutheader,.paymentHeader{
     display: flex;
     justify-content: center;
     text-align: center;

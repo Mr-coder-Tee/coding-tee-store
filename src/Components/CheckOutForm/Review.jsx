@@ -22,6 +22,7 @@ const Review = ({checkoutToken}) => {
                 </h4>
             </listItem>
         </List>
+        
     </div> );
 }
  
