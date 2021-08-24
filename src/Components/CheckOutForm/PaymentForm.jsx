@@ -4,6 +4,8 @@ import { Button } from "@material-ui/core";
 
 const PaymentForm = ({ setShippingData, checkoutToken,backStep,handleCaptureCheckout,nextStep }) => {
 
+    console.log("setShippingData-->",setShippingData)
+
     const handleSubmit=()=>{
 
         const orderData={
@@ -14,10 +16,11 @@ const PaymentForm = ({ setShippingData, checkoutToken,backStep,handleCaptureChec
                      suburb:setShippingData.address2,
                      town_city:setShippingData.city,
                      province:setShippingData.province,
+                     shipping_country:"South Africa",
                      postal_zip:setShippingData.zip},
             fulfillment:{shipping_method:setShippingData.shippingOption},
             payment:{
-                gateway:'EFT',
+                gateway:'manual',
                 manual:{
                     id:'gway_joPZk8OkaqRple'
                 },
