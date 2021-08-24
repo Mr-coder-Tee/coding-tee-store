@@ -1,7 +1,7 @@
 import React from 'react';
 import pic from './javascriptdesign.jpeg';
 
-const CartCard = ({item}) => {
+const CartCard = ({item,handleUpdateCartQty,handleRemoveFromCart}) => {
   console.log("item--->",item);
 
     return ( 
@@ -16,12 +16,12 @@ const CartCard = ({item}) => {
                 </div>
                 <div className="buttons">
                     <div className="quantity">
-                        <button className="subtract">-</button>
+                        <button className="subtract" onClick={()=>handleUpdateCartQty(item.id,item.quantity-1)}>-</button>
                         <h4 >{item.quantity}</h4>
-                        <button className="add">+</button>
+                        <button className="add" onClick={()=>handleUpdateCartQty(item.id,item.quantity+1)}>+</button>
                     </div>
                     <div className="removeBtn">
-                        <button className="remove">Remove</button>
+                        <button className="remove" onClick={()=>handleRemoveFromCart(item.id)}>Remove</button>
                     </div>
                 </div>
             </div>

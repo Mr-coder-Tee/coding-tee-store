@@ -2,7 +2,7 @@ import React from "react";
 import CartCard from "./CartCard/CartCard";
 import { Link } from "react-router-dom";
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart,handleUpdateCartQty,handleRemoveFromCart,handleEmptyCart }) => {
 
 
 
@@ -17,7 +17,9 @@ const Cart = ({ cart }) => {
       <div className="cardCards">
           {
               cart.line_items.map((item)=>(
-                  <CartCard key={item.id} item={item}/>
+                  <CartCard key={item.id} item={item} 
+                  handleUpdateCartQty={handleUpdateCartQty}
+                  handleRemoveFromCart={handleRemoveFromCart}/>
               ))
           }
       </div>
@@ -27,7 +29,7 @@ const Cart = ({ cart }) => {
           <h4>{cart.subtotal.formatted_with_symbol}</h4>
         </div>
         <div className="buttonsHolder">
-          <button className="design-danger btnSize mag design">
+          <button className="design-danger btnSize mag design" onClick={handleEmptyCart}>
             Empty cart
           </button>
           <button className="design-primary btnSize mag design">
