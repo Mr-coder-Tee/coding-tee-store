@@ -17,7 +17,10 @@ const PaymentForm = ({ setShippingData, checkoutToken,backStep,handleCaptureChec
                      postal_zip:setShippingData.zip},
             fulfillment:{shipping_method:setShippingData.shippingOption},
             payment:{
-                method:'Direct'
+                gateway:'manual',
+                manual:{
+                    id:'gway_joPZk8OkaqRple'
+                },
             }
         }
         handleCaptureCheckout(checkoutToken.id,orderData)
