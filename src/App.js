@@ -17,6 +17,8 @@ function App() {
 
   const [products, SetProducts] = useState([]);
   const [cart, setCart] = useState({});
+  const [order, setOrder] = useState({});
+  const [errorMessage, setErrorMessage] = useState('')
 
   // X----------useState----------X
 
@@ -39,7 +41,7 @@ function App() {
     console.log("color", color, colorGroupId);
     console.log("size", size, sizeGroupId);
     const item = await commerce.cart
-      .add(productId, quantity)//, { colorGroupId: color, sizeGroupId: size }
+      .add(productId, quantity) //, { colorGroupId: color, sizeGroupId: size }
       .catch((err) => {
         console.log("error--", err);
       });
@@ -59,7 +61,23 @@ function App() {
     setCart(cart);
   };
 
-  
+  const refreshCart = async () => {
+    const newCart = await commerce.cart.refresh();
+    setCart(newCart);
+  };
+
+  const handleCaptureCheckout = async (checkoutTokenId, newOrder) => {
+    try {
+      const inComingOrder = await commerce.checkout.capture(
+        checkoutTokenId,
+        newOrder
+      );
+      setOrder(inComingOrder);
+      refreshCart();
+    } catch (error) {
+      setErrorMessage(error.data.error.message)
+    }
+  };
 
   // X----------Fuctions----------X
 
@@ -79,17 +97,19 @@ function App() {
           </Route>
 
           <Route exact path="/cart">
-            <Cart cart={cart} 
-            handleUpdateCartQty={handleUpdateCartQty}
-            handleRemoveFromCart={handleRemoveFromCart}
-            handleEmptyCart={handleEmptyCart}/>
+            <Cart
+              cart={cart}
+              handleUpdateCartQty={handleUpdateCartQty}
+              handleRemoveFromCart={handleRemoveFromCart}
+              handleEmptyCart={handleEmptyCart}
+            />
           </Route>
 
           <Route exact path="/collection">
             <Collection products={products} handleAddToCart={handleAddToCart} />
           </Route>
           <Route exact path="/checkout">
-              <Checkout cart={cart}/>
+            <Checkout cart={cart} handleCaptureCheckout={handleCaptureCheckout} order={order} error={errorMessage}/>
           </Route>
         </Switch>
         <Subcribe />

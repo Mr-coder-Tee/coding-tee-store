@@ -25,7 +25,7 @@ const steps = ["Shipping address", "Payments"];
 
 const Confirmation = () => <div>Confirmation</div>;
 
-const Checkout = ({cart}) => {
+const Checkout = ({cart,handleCaptureCheckout,order,error}) => {
   const [activeStep, setActiveStep] = useState(0);
   const [checkoutToken,setCheckoutToken]=useState(null);
   const [shippingData,setShippingData]=useState({});
@@ -57,7 +57,7 @@ const next=(data)=>{
     nextStep();
 }
 
-  const Form = () => (activeStep === 0 ? <AddressForm checkoutToken={checkoutToken} next={next}/> : <PaymentForm backStep={backStep} setShippingData={setShippingData} checkoutToken={checkoutToken}/>);
+  const Form = () => (activeStep === 0 ? <AddressForm checkoutToken={checkoutToken} next={next}/> : <PaymentForm nextStep={nextStep} backStep={backStep} handleCaptureCheckout={handleCaptureCheckout} setShippingData={setShippingData} checkoutToken={checkoutToken}/>);
   return (
     <div className="toolbar">
       <div className="layout">

@@ -2,7 +2,7 @@ import React from "react";
 import Review from "./Review";
 import { Button } from "@material-ui/core";
 
-const PaymentForm = ({ setShippingData, checkoutToken,backStep }) => {
+const PaymentForm = ({ setShippingData, checkoutToken,backStep,handleCaptureCheckout,nextStep }) => {
 
     const handleSubmit=()=>{
 
@@ -20,6 +20,9 @@ const PaymentForm = ({ setShippingData, checkoutToken,backStep }) => {
                 method:'Direct'
             }
         }
+        handleCaptureCheckout(checkoutToken.id,orderData)
+        nextStep();
+
     }
 
   return (
@@ -67,7 +70,7 @@ const PaymentForm = ({ setShippingData, checkoutToken,backStep }) => {
       <div style={{display:'flex',justifyContent:'space-between' ,marginTop:'10px'}}>
 
         <Button variant="outlined" onClick={backStep}>Back</Button>
-        <Button variant="contained" color="primary">
+        <Button variant="contained" color="primary" onClick={handleSubmit()}>
             Pay {checkoutToken.live.subtotal.formatted_with_symbol}
         </Button>
       </div>
