@@ -11,9 +11,14 @@ import { storeCollection } from "./data";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
+  // ----------useState----------
+
   const [products, SetProducts] = useState([]);
   const [cart, setCart] = useState({});
 
+  // X----------useState----------X
+
+  // ----------Fuctions----------
   const getProducts = async () => {
     const { data } = await commerce.products.list();
     SetProducts(data);
@@ -21,22 +26,43 @@ function App() {
   const getCart = async () => {
     setCart(await commerce.cart.retrieve());
   };
-
-  const handleAddToCart = async (productId, quantity,color,colorGroupId,size,sizeGroupId) => {
-    
-    console.log("color",color,colorGroupId);
-    console.log("size",size,sizeGroupId);
-    const item = await commerce.cart.add(productId, quantity,{colorGroupId:color,sizeGroupId:size})
-                .catch((err)=>{console.log("error--",err)});
+  const handleAddToCart = async (
+    productId,
+    quantity,
+    color,
+    colorGroupId,
+    size,
+    sizeGroupId
+  ) => {
+    console.log("color", color, colorGroupId);
+    console.log("size", size, sizeGroupId);
+    const item = await commerce.cart
+      .add(productId, quantity, { colorGroupId: color, sizeGroupId: size })
+      .catch((err) => {
+        console.log("error--", err);
+      });
     setCart(item.cart);
   };
+
+  const handleUpdateToCart = async (productId, quantity) => {
+    const { cart } = await commerce.cart.update(productId, { quantity });
+    setCart(cart);
+  };
+  const handleRemoveFromCar = async (productId) => {
+    const { cart } = await commerce.cart.remove(productId);
+    setCart(cart);
+  };
+  const handleEmptyCart = async () => {
+    const { cart } = await commerce.cart.empty();
+    setCart(cart);
+  };
+
+  // X----------Fuctions----------X
 
   useEffect(() => {
     getProducts();
     getCart();
   }, []);
-
-  console.log(cart)
 
   return (
     <Router>
@@ -49,7 +75,7 @@ function App() {
           </Route>
 
           <Route exact path="/cart">
-            <Cart />
+            <Cart cart={cart} />
           </Route>
 
           <Route exact path="/collection">
