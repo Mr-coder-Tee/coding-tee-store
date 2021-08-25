@@ -5,7 +5,7 @@ import HomePage from "./Components/HomePage/HomePage";
 import Collection from "./Components/Collections/Collection";
 import Footer from "./Components/Footer/Footer";
 import Subcribe from "./Components/HomePage/Subcribe/Subcribe";
-
+import Legal from "./Components/Legal/legal";
 import Checkout from "./Components/CheckOutForm/CheckOut/checkout";
 import { commerce } from "./lib/commerce";
 import "./style.css";
@@ -111,6 +111,11 @@ function App() {
           <Route exact path="/checkout">
             <Checkout cart={cart} handleCaptureCheckout={handleCaptureCheckout} order={order} error={errorMessage}/>
           </Route>
+
+          <Route exact path="/legal/:id">
+            <Legal/>
+          </Route>
+
         </Switch>
         <Subcribe />
         <Footer products={products} />

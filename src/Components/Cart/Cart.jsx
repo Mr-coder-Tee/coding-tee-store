@@ -42,14 +42,14 @@ const Cart = ({ cart,handleUpdateCartQty,handleRemoveFromCart,handleEmptyCart })
   );
 
 
-  if(!cart.line_items.length)return "Loading...";
+  // if(!cart.line_items.length)return "Loading...";
 
   return (
     <div className="cartContainer">
       <div className="cartheading">
         <h1>Your cart</h1>
       </div>
-      {cart.line_items.length===0 ? <EmptyCart/> : <FilledCart/>}
+      {!cart.line_items.length ? <EmptyCart/> : <FilledCart/>}
     </div>
   );
 };

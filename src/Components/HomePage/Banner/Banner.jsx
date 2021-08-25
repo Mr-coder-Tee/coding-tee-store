@@ -1,3 +1,4 @@
+import { Button } from "@material-ui/core";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -19,16 +20,16 @@ const Banner = () => {
           <br />
           then it is time to show off your super powers.
         </h1>
-        <p>Grad your favourite T-shirt design or pick from your field.</p>
+        <p>Grab your favourite T-shirt design or pick from your field.</p>
         <p>
-          place your order online and recieve free shipping anywhere in South
+          place your order online and receive free shipping anywhere in South
           Africa
         </p>
         <a href="#">T's and C's Apply</a>
         <div className="btnContainer">
-          <button  className="btn">
+          <Button component={Link} to="/collection"  class="btn" >
             View All Collections
-          </button>
+          </Button>
         </div>
       </div>
       <div className="ImgCover" />

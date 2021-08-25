@@ -1,5 +1,6 @@
 import React from "react";
 import useStyles from "./styles";
+import { Link } from "react-router-dom";
 import { WbSunnyOutlined, Brightness2Outlined } from "@material-ui/icons";
 import cup from "../../Images/cup_java_icon.png";
 
@@ -46,11 +47,11 @@ const Footer = ({ products }) => {
           <div className={classes.legal}>
             <h2>Legal</h2>
             <ul>
-              <li>Privacy Policy</li>
-              <li>Copyright Policy</li>
-              <li>Delivery Policy</li>
-              <li>Refund Policy</li>
-              <li>Terms & Conditions</li>
+              <li><Link to="/legal/PrivacyPolicy">Privacy Policy</Link></li>
+              <li><Link to="/legal/CopyrightPolicy">Copyright Policy</Link></li>
+              <li><Link to="/legal/DeliveryPolicy">Delivery Policy</Link></li>
+              <li><Link to="/legal/RefundPolicy">Refund Policy</Link></li>
+              <li><Link to="/legal/TermsandConditions">Terms & Conditions</Link></li>
             </ul>
           </div>
         </div>

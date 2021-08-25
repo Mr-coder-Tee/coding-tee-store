@@ -60,12 +60,9 @@ function SaleCountDown() {
 
   return (
       <div className="sale">
-        <div className="saleBanner">
-            <h1>Coding Tshirts</h1>
-        </div>
         <div className="countdowncard">
             <div className="header">
-                <h3>Count Down To Grand opening</h3>
+                <h3>Count Down To Grand Opening</h3>
                 <p>We are some time away from opeing in the mean time check out our collection.</p>
             </div>
             <div className="timer-container">

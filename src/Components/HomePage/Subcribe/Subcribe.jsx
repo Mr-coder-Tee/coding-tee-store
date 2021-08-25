@@ -48,7 +48,7 @@ const Subcribe = () => {
           {(formik) => (
             <div className="form-holder">
               <div className="subcText">
-                <h2>Subcribe</h2>
+                <h2>Subscribe</h2>
                 <p>
                   Sign up to get the latest on sales,new releases and more...
                 </p>
