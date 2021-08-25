@@ -33,13 +33,12 @@ const CollectionCard = ({ product, handleAddToCart }) => {
     }
     handleVariant();
   
-}, [])
+}, [color,size])
 
-setVariant({[product.variant_groups[0].id]:color,[product.variant_groups[1].id]:size})
 
-  console.log('color--->',color);
-  console.log('size--->',size);
-  console.log('variant--->',variant);
+  // console.log('color--->',color);
+  // console.log('size--->',size);
+  // console.log('variant--->',variant);
  
 
 
