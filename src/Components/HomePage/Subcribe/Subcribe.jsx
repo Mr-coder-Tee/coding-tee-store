@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import TextField from "./Textfield/TextField";
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
@@ -6,28 +6,37 @@ import Firebase from "../../Firebase/Firebase";
 
 const Subcribe = () => {
   const db = Firebase.firestore();
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+
+
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    console.log(name, email);
+    // clearing the values
+    setEmail("");
+    setName("");
+  }
 
   const validate = Yup.object({
-    name: Yup.string().required("enter valid name") ,
-    email: Yup.string().required("enter valid your email").email("enter valid email"),
-    
-    });
-    const createFirebaseUser = (
-      _name,
-      _email
-    ) => {
-      db.collection("users")
-        .add({
-          name: _name,
-          email: _email,
-        })
-        .then((res) => {
-          console.log("user created");
-        })
-        .catch((err) => {
-          console.log("error->", err);
-        });
-    };
+    name: Yup.string().required("enter valid name"),
+    email: Yup.string()
+      .required("enter valid your email")
+      .email("enter valid email"),
+  });
+  const createFirebaseUser = (_name, _email) => {
+    db.collection("users")
+      .add({
+        name: _name,
+        email: _email,
+      })
+      .then((res) => {
+        console.log("user created");
+      })
+      .catch((err) => {
+        console.log("error->", err);
+      });
+  };
   return (
     <div className="subContainer flexCenter">
       <div className="SubForm">
@@ -37,12 +46,15 @@ const Subcribe = () => {
             email: "",
           }}
           validationSchema={validate}
-          onSubmit={(values) => {
+          onSubmit={(values,{setSubmitting, resetForm}) => {
             console.log(values);
-            createFirebaseUser(
-              values.name,
-              values.email
-            );
+            createFirebaseUser(values.name, values.email);
+            window.print("Thank you for Subscribing")
+            
+            resetForm('')
+            setSubmitting(false);
+           
+            
           }}
         >
           {(formik) => (
@@ -55,13 +67,26 @@ const Subcribe = () => {
               </div>
               <Form className="flexCenter flex-colonm">
                 <div>
-                  <TextField className="mT-10 input" label="First Name" name="name" type="text" />
+                  <TextField
+                    className="mT-10 input"
+                    label="First Name"
+                    name="name"
+                    type="text"
+                  />
                 </div>
                 <div>
-                  <TextField className="mT-10 input" label="Your Email" name="email" type="text" />
+                  <TextField
+                    className="mT-10 input"
+                    label="Your Email"
+                    name="email"
+                    defaultValue="hello"
+                    type="text"
+                  />
                 </div>
                 <div className="btnbx">
-                  <button type="submit" className="btn btnfont">Sign up</button>
+                  <button type="submit" className="btn btnfont" >
+                    Sign up
+                  </button>
                 </div>
               </Form>
             </div>
