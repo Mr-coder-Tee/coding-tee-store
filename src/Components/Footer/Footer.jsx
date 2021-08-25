@@ -47,7 +47,7 @@ const Footer = ({ products }) => {
             <h2>Legal</h2>
             <ul>
               <li>Privacy Policy</li>
-              <li>Copy Right Policy</li>
+              <li>Copyright Policy</li>
               <li>Delivery Policy</li>
               <li>Refund Policy</li>
               <li>Terms & Conditions</li>
