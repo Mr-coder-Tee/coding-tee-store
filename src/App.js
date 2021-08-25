@@ -33,15 +33,11 @@ function App() {
   const handleAddToCart = async (
     productId,
     quantity,
-    color,
-    colorGroupId,
-    size,
-    sizeGroupId
+    variant
   ) => {
-    console.log("color", color, colorGroupId);
-    console.log("size", size, sizeGroupId);
+    console.log("variant", variant);
     const item = await commerce.cart
-      .add(productId, quantity,{ "vgrp_kd6Ll2DvnoV2mj": "optn_kd6Ll279JwV2mj", "vgrp_4OANwRe8plvYL8": "optn_VPvL5zO19lAQkX" }) //, { colorGroupId: color, sizeGroupId: size }
+      .add(productId, quantity,variant ) //, { colorGroupId: color, sizeGroupId: size }
       .catch((err) => {
         console.log("error--", err);
       });

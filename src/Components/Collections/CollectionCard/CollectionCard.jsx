@@ -5,45 +5,42 @@ import { IconButton } from "@material-ui/core";
 
 const CollectionCard = ({ product, handleAddToCart }) => {
   const classes = useStyles();
-  const [color,setColor]=useState(product.variant_groups[0].options[0]);
-  const [size,setSize]=useState(product.variant_groups[1].options[0])
-  const [variantColor,setVariantColor]=useState({})
-  const [variantSize,setVariantSize]=useState({})
+  const [color,setColor]=useState(product.variant_groups[0].options[0].id);
+  const [size,setSize]=useState(product.variant_groups[1].options[0].id)
+  const [variant,setVariant]=useState({})
 
-  console.log("c",product.variant_groups[0].id);
-  console.log("s",product.variant_groups[1].id);
+  // console.log("c",product.variant_groups[0].id);
+  // console.log("s",product.variant_groups[1].id);
   // console.log('color--->',color,colorGroupId,'size----->',size,sizeGroupId);
   
 
   const getColor=(i)=>{
-    setColor(product.variant_groups[0].options[i])
-    setVariantColor({[product.variant_groups[0].id]:color})
+    setColor(product.variant_groups[0].options[i].id)
+
     
   }
   const getSize=(j)=>{
-    setSize(product.variant_groups[1].options[j])
-    setVariantSize({[product.variant_groups[1].id]:size})
+    setSize(product.variant_groups[1].options[j].id)
+
   }
 
   
 
 
   useEffect(() => {  
-    const handleSize=()=>{
-      setVariantSize({[product.variant_groups[1].id]:size})
+    const handleVariant=()=>{
+      setVariant({[product.variant_groups[0].id]:color,[product.variant_groups[1].id]:size})
     }
-    const handleColor=()=>{
-      setVariantColor({[product.variant_groups[0].id]:color})
-    }
-    handleSize();
-    handleColor();
-}, [color,size])
+    handleVariant();
+  
+}, [])
 
+setVariant({[product.variant_groups[0].id]:color,[product.variant_groups[1].id]:size})
 
   console.log('color--->',color);
   console.log('size--->',size);
-  console.log('variantColor--->',variantColor);
-  console.log('variantSize--->',variantSize);
+  console.log('variant--->',variant);
+ 
 
 
 
@@ -86,7 +83,7 @@ const CollectionCard = ({ product, handleAddToCart }) => {
           <IconButton
             class="addcart"
             aria-label="add to cart"
-            onClick={() => handleAddToCart(product.id, 1)}
+            onClick={() => handleAddToCart(product.id, 1,variant)}
           >
             <AddShoppingCart />
           </IconButton>
