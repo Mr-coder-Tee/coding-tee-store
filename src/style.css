@@ -27,6 +27,9 @@
     list-style: none;
     text-decoration: none;
 }
+a{
+    color: white;
+}
 table{
     width: 100%;
     border: 1px solid black;

@@ -31,7 +31,7 @@ export default makeStyles(()=>({
         justifyContent: "center",
         flexWrap: "wrap",
         cursor: "pointer",
-        '& i':{
+        '& a':{
             transition: "all .5s ease-in",
             margin:"8px",
             '&:nth-child(3)':{
