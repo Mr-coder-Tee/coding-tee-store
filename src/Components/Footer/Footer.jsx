@@ -29,7 +29,7 @@ const Footer = ({ products }) => {
             <a href="https://github.com/Mr-coder-Tee" target="_blank">
               <i class="fa fa-github"></i>
             </a>
-            <a href="" target="_blank">
+            <a href="https://wa.me/message/OOIJ6PED2BL3O1" target="_blank">
               <i class="fa fa-whatsapp"></i>
             </a>
           </div>
