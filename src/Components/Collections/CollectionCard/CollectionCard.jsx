@@ -10,38 +10,47 @@ const CollectionCard = ({ product, handleAddToCart }) => {
   const [variant,setVariant]=useState({})
   const [sizeArr,setSizeArr]=useState([])
 
-  // console.log("c",product.variant_groups[0].id);
+  const [image,setImage]=useState(product.assets[0].url);
+
+  console.log("V",product);
   // console.log("s",product.variant_groups[1].id);
   // console.log('color--->',color,colorGroupId,'size----->',size,sizeGroupId);
   
 
   const getColor=(i)=>{
     setColor(product.variant_groups[0].options[i].id)
-
+    setImage(product.assets[i].url)
     
   }
   const getSize=(j)=>{
     setSize(product.variant_groups[1].options[j].id)
 
   }
-
   
 
-  useEffect(() => {        
+//   useEffect(() => {        
         
-    let finalSizeArray = product.variant_groups[0].options.map(option => {
-        let sizeInfo = {}
+//     let finalSizeArray = product.variant_groups[0].options.map(option => {
+//         let sizeInfo = {}
 
-        sizeInfo.key = option.name
-        sizeInfo.text = option.name
-        sizeInfo.value = option.id
+//         sizeInfo.key = option.name
+//         sizeInfo.text = option.name
+//         sizeInfo.value = option.id
 
-        return sizeInfo
-    })
+//         return sizeInfo
+//     })
 
-    setSizeArr(finalSizeArray)
-}, [])
+//     setSizeArr(finalSizeArray)
 
+// }, [])
+
+
+  // useEffect(()=>{
+
+
+
+
+  // },[image])
 
   useEffect(() => {  
     const handleVariant=()=>{
@@ -50,21 +59,22 @@ const CollectionCard = ({ product, handleAddToCart }) => {
     handleVariant();
   
 }, [color,size])
+console.log("image",image);
 
 
-  console.log('color--->',color);
-  console.log('size--->',size);
-  console.log('variant--->',variant);
+  // console.log('color--->',color);
+  // console.log('size--->',size);
+  // console.log('variant--->',variant);
  
 
-
+//product.media.source
 
 
   return (
     <div className="collectioncard">
       <p>{product.inventory.avaliable}</p>
       <div className="collectionImgbx">
-        <img src={product.media.source} alt="" />
+        <img src={image} alt="" />
       </div>
       <div className="productDetails">
         <div className="inventoryName">
