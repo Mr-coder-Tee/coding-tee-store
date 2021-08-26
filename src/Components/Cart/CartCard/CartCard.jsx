@@ -2,7 +2,6 @@ import React from 'react';
 import pic from './javascriptdesign.jpeg';
 
 const CartCard = ({item,handleUpdateCartQty,handleRemoveFromCart}) => {
-  console.log("item--->",item);
 
     return ( 
         <div className="CartCardContainer">

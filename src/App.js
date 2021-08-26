@@ -81,7 +81,6 @@ function App() {
     getCart();
   }, []);
 
-  console.log("new")
 
   return (
     <Router>
