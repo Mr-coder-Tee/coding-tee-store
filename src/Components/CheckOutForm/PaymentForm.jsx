@@ -4,6 +4,7 @@ import { Button } from "@material-ui/core";
 
 const PaymentForm = ({ setShippingData, checkoutToken,backStep,handleCaptureCheckout,nextStep }) => {
 const shiiping=checkoutToken.shipping_methods[0].id;
+const street=setShippingData.address1+","+setShippingData.address2
     console.log("setShippingData-->",checkoutToken)
 
     const handleSubmit=()=>{
@@ -12,7 +13,7 @@ const shiiping=checkoutToken.shipping_methods[0].id;
             line_item:checkoutToken.live.line_items,
             customer:{firstname:setShippingData.firstname,lastname:setShippingData.lastname,email:setShippingData.email},
             shipping:{name:'primary',
-                     street:setShippingData.address1,
+                     street:street,
                      suburb:setShippingData.address2,
                      town_city:setShippingData.city,
                      province:setShippingData.province,
