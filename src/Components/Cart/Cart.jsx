@@ -5,7 +5,6 @@ import { Button } from "@material-ui/core";
 
 const Cart = ({ cart,handleUpdateCartQty,handleRemoveFromCart,handleEmptyCart }) => {
 
-console.log("-------cart----------",cart)
 
   const EmptyCart = () => (
     <div className="emptyHandler">

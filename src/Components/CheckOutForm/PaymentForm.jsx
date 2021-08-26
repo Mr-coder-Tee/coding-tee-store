@@ -2,10 +2,8 @@ import React from "react";
 import Review from "./Review";
 import { Button } from "@material-ui/core";
 
-const PaymentForm = ({ setShippingData, checkoutToken,backStep,handleCaptureCheckout,nextStep }) => {
-const shiiping=checkoutToken.shipping_methods[0].id;
+const PaymentForm = ({ setShippingData, checkoutToken,backStep,handleCaptureCheckout,nextStep,shippingmethod }) => {
 const street=setShippingData.address1+","+setShippingData.address2
-    console.log("setShippingData-->",checkoutToken)
 
     const handleSubmit=()=>{
 
@@ -18,7 +16,7 @@ const street=setShippingData.address1+","+setShippingData.address2
                      town_city:setShippingData.city,
                      province:setShippingData.province,
                      country: 'ZA',
-                     postal_zip:setShippingData.zip},
+                     postal_zip:shippingmethod},
             fulfillment:{shipping_method:shiiping},
             payment:{
                 gateway:'manual',

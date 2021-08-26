@@ -35,7 +35,6 @@ function App() {
     quantity,
     variant
   ) => {
-    console.log("variant", variant);
     const item = await commerce.cart
       .add(productId, quantity,variant ) //, { colorGroupId: color, sizeGroupId: size }
       .catch((err) => {

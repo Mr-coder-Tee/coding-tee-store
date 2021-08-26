@@ -13,6 +13,7 @@ import {
 } from "@material-ui/core";
 import useStyle from "./styles";
 import { commerce } from "../../../lib/commerce";
+import { set } from "react-hook-form";
 
 
 const steps = ["Shipping address", "Payments"];
@@ -29,6 +30,7 @@ const Checkout = ({cart,handleCaptureCheckout,order,error}) => {
   const [activeStep, setActiveStep] = useState(0);
   const [checkoutToken,setCheckoutToken]=useState(null);
   const [shippingData,setShippingData]=useState({});
+  const [shippingmethod,setShippingMathod]=useState('')
   const classes = useStyle();
 
 
@@ -38,6 +40,7 @@ const Checkout = ({cart,handleCaptureCheckout,order,error}) => {
         try{
             const token =await commerce.checkout.generateToken(cart.id,{type:'cart'})
             setCheckoutToken(token);
+            setShippingMathod(token.shipping_methods[0].id)
         }catch(error){
 
         }
@@ -53,12 +56,11 @@ const nextStep=()=> setActiveStep((prevActiveStep)=>prevActiveStep+1)
 const backStep=()=> setActiveStep((prevActiveStep)=>prevActiveStep-1)
 
 const next=(data)=>{
-  console.log("data-------->",data)
     setShippingData(data)
     nextStep();
 }
 
-  const Form = () => (activeStep === 0 ? <AddressForm checkoutToken={checkoutToken} next={next}/> : <PaymentForm nextStep={nextStep} backStep={backStep} handleCaptureCheckout={handleCaptureCheckout} setShippingData={shippingData} checkoutToken={checkoutToken}/>);
+  const Form = () => (activeStep === 0 ? <AddressForm checkoutToken={checkoutToken} next={next}/> : <PaymentForm shippingmethod={shippingmethod} nextStep={nextStep} backStep={backStep} handleCaptureCheckout={handleCaptureCheckout} setShippingData={shippingData} checkoutToken={checkoutToken}/>);
   return (
     <div className="toolbar">
       <div className="layout">
