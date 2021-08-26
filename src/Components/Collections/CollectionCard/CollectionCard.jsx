@@ -36,9 +36,9 @@ const CollectionCard = ({ product, handleAddToCart }) => {
 }, [color,size])
 
 
-  // console.log('color--->',color);
-  // console.log('size--->',size);
-  // console.log('variant--->',variant);
+  console.log('color--->',color);
+  console.log('size--->',size);
+  console.log('variant--->',variant);
  
 
 
@@ -68,10 +68,16 @@ const CollectionCard = ({ product, handleAddToCart }) => {
             <span>size:</span>
             <div className="sizelist">
               {product.variant_groups[1].options.map((sizebtn,index) => (
-                <button key={sizebtn.id} className="sizeBtn" onClick={()=>getSize(index)}>
-                  {sizebtn.name}
-                </button>
+                // <button key={sizebtn.id} className="sizeBtn" onClick={()=>getSize(index)}>
+                //   {sizebtn.name}
+                // </button>
+
+                <div className="inputSelectSize" key={sizebtn.id}>
+                  <span>{sizebtn.name}</span>
+                  <input type="radio" onChange={()=>getSize(index)} value={sizebtn.name} name={product.variant_groups[1].id}/>
+                </div>
               ))}
+              <div className="select"/>
             </div>
           </div>
         </div>
