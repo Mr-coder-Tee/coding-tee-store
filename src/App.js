@@ -81,6 +81,8 @@ function App() {
     getCart();
   }, []);
 
+  console.log("new")
+
   return (
     <Router>
       <div className="App-container">
