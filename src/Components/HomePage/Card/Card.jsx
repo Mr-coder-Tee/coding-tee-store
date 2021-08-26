@@ -14,7 +14,7 @@ const HomeCard = ({product}) => {
                 <h3 className="title">{product.category}</h3>
                 <Link to="/collection" className="btnView">View Collection</Link>
             </div>
-            <div className="black"/>
+            <div className="blackColor"/>
         </div> );
 }
  

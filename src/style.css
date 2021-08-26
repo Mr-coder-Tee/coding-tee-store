@@ -29,19 +29,16 @@
 }
 .Black,.black,.BLACK{
     background:black !important;
-    color:black !important;
+    
 }
 .White,.white,.WHITE{
     background:white !important;
-    color:white !important;
 }
 .Grey,.grey,.GREY{
     background:grey !important;
-    color:grey !important;
 }
 .Skyblue,.skyblue,.SKYBLUE,.SkyBlue{
     background:skyblue !important;
-    color:skyblue !important;
 }
 
 
@@ -257,14 +254,14 @@ body{
 .homecard:hover .title::after{
     width: 100%;
 }
-.black{
+.blackColor{
     position: absolute;
     top: 0;
     transition: 1s ease;
     width: 100%;
     height: 100%;
 }
-.homecard:hover .black {
+.homecard:hover .blackColor {
     background: rgba(0, 0, 0, 0.7);
 }
 /*x-----card-----x*/
@@ -347,7 +344,6 @@ body{
 }
 .colorlist,.sizelist{
     display: flex;
-    justify-content: center;
 }
 .colorlist button{
     width: 15px;
@@ -357,7 +353,7 @@ body{
     border-radius: 50%;
 }
 
-.colorlist :nth-child(1){
+/* .colorlist :nth-child(1){
     background: white;
 }
 .colorlist :nth-child(2){
@@ -365,7 +361,7 @@ body{
 }
 .colorlist :nth-child(3){
     background: skyblue;
-}
+} */
 .sizelist li{
     margin: 0 5px;
 }
@@ -785,7 +781,7 @@ body{
         transform: translateY(0%);
         opacity: 1;
     }
-    .black {
+    .blackColor {
         background: rgba(0, 0, 0, 0.7);
     }
     .saleBanner,.countdowncard{
