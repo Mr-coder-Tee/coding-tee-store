@@ -12,7 +12,7 @@ const CollectionCard = ({ product, handleAddToCart }) => {
 
   const [image,setImage]=useState(product.assets[0].url);
 
-  console.log("V",product);
+  console.log("product.assets",product.assets);
   // console.log("s",product.variant_groups[1].id);
   // console.log('color--->',color,colorGroupId,'size----->',size,sizeGroupId);
   
