@@ -3,28 +3,28 @@ import Review from "./Review";
 import { Button } from "@material-ui/core";
 
 const PaymentForm = ({ setShippingData, checkoutToken,backStep,handleCaptureCheckout,nextStep }) => {
-
-    console.log("setShippingData-->",setShippingData)
+const shiiping=checkoutToken.shipping_methods[0].id;
+    console.log("setShippingData-->",checkoutToken)
 
     const handleSubmit=()=>{
 
         const orderData={
             line_item:checkoutToken.live.line_items,
-            customer:{firstname:"setShippingData.firstname",lastname:"setShippingData.lastname",email:"mamtimeofentje@gmail.com"},
+            customer:{firstname:setShippingData.firstname,lastname:setShippingData.lastname,email:setShippingData.email},
             shipping:{name:'primary',
-                     street:"setShippingData.address1",
-                     suburb:"setShippingData.address2",
-                     town_city:"setShippingData.city",
-                     province:"setShippingData.province",
+                     street:setShippingData.address1,
+                     suburb:setShippingData.address2,
+                     town_city:setShippingData.city,
+                     province:setShippingData.province,
                      country: 'ZA',
-                     postal_zip:"0784"},
-            fulfillment:{shipping_method:"setShippingData.shippingOption"},
+                     postal_zip:setShippingData.zip},
+            fulfillment:{shipping_method:shiiping},
             payment:{
                 gateway:'manual',
                 manual:{
                     id:'gway_joPZk8OkaqRple'
                 },
-                pay_what_you_want: '149.99'
+                pay_what_you_want: '999.99'
             }
         }
         handleCaptureCheckout(checkoutToken.id,orderData)
