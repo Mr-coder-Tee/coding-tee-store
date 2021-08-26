@@ -15,7 +15,7 @@ const CollectionCard = ({ product, handleAddToCart }) => {
   console.log("product.assets",product.assets);
   // console.log("s",product.variant_groups[1].id);
   // console.log('color--->',color,colorGroupId,'size----->',size,sizeGroupId);
-  
+   
 
   const getColor=(i)=>{
     setColor(product.variant_groups[0].options[i].id)
@@ -84,11 +84,13 @@ console.log("image",image);
         <div className="selectproperties">
           <div className="color">
             <span>color:</span>
-            <ul className="colorlist">
+            <div className="colorlist">
               {product.variant_groups[0].options.map((colorBtn,index) => (
-                <button key={colorBtn.id} className={`sizeBtn ${colorBtn.name}`}onClick={()=>getColor(index)}/>
+                
+                <button key={colorBtn.id} className={`${colorBtn.name} sizeBtn`} onClick={()=>getColor(index)}/>
+              
               ))}
-            </ul>
+            </div>
           </div>
           <div className="size">
             <span>size:</span>
