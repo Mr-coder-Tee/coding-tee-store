@@ -17,10 +17,10 @@ const AddressForm = ({ checkoutToken,next }) => {
             <FormInput name="lastname" label="Last Name" required />
             <FormInput name="address1" label="Address 1" required />
             <FormInput name="address2" label="Address 2" />
-            <FormInput name="email" label="Email" required />
             <FormInput name="city" label="City" required />
-            <FormInput name="province" label="Province" required />
             <FormInput name="zip" label="Zip/Postal Code" required />
+            <FormInput name="email" label="Email" required />
+            <FormInput name="phone" label="Phone Number" required />
           </Grid>
           <div
             style={{

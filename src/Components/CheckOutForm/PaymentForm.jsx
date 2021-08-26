@@ -4,7 +4,6 @@ import { Button } from "@material-ui/core";
 
 const PaymentForm = ({ setShippingData, checkoutToken,backStep,handleCaptureCheckout,nextStep,shippingmethod }) => {
 const street=setShippingData.address1+","+setShippingData.address2
-    console.log("shippingmethod-->",)
     const handleSubmit=()=>{
 
         const orderData={
@@ -14,7 +13,7 @@ const street=setShippingData.address1+","+setShippingData.address2
                      street:street,
                      suburb:setShippingData.address2,
                      town_city:setShippingData.city,
-                     province:setShippingData.province,
+                     province:setShippingData.phone,
                      country: 'ZA',
                      postal_zip:setShippingData.zip},
             fulfillment:{shipping_method:shippingmethod},
