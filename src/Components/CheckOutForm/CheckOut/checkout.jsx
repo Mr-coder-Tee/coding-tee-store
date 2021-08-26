@@ -58,7 +58,7 @@ const next=(data)=>{
     nextStep();
 }
 
-  const Form = () => (activeStep === 0 ? <AddressForm checkoutToken={checkoutToken} next={next}/> : <PaymentForm nextStep={nextStep} backStep={backStep} handleCaptureCheckout={handleCaptureCheckout} setShippingData={setShippingData} checkoutToken={checkoutToken}/>);
+  const Form = () => (activeStep === 0 ? <AddressForm checkoutToken={checkoutToken} next={next}/> : <PaymentForm nextStep={nextStep} backStep={backStep} handleCaptureCheckout={handleCaptureCheckout} setShippingData={shippingData} checkoutToken={checkoutToken}/>);
   return (
     <div className="toolbar">
       <div className="layout">

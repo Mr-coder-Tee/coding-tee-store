@@ -11,11 +11,13 @@ const FormInput = ({ name, label, required }) => {
         control={control}
         name={name}
         as={TextField}
-        render = {({ field})=> (
+        render = {({ field :{value,onChange}})=> (
           <TextField
               fullWidth
               label={label}
               required
+              value={value}
+              onChange={onChange}
           />
       )}
       />
