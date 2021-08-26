@@ -27,6 +27,25 @@
     list-style: none;
     text-decoration: none;
 }
+.Black,.black,.BLACK{
+    background:black;
+    color:black;
+}
+.White,.white,.WHITE{
+    background:white;
+    color:white;
+}
+.Grey,.grey,.GREY{
+    background:grey;
+    color:grey;
+}
+.Skyblue,.skyblue,.SKYBLUE,.SkyBlue{
+    background:skyblue;
+    color:skyblue;
+}
+
+
+
 a{
     color: white;
 }

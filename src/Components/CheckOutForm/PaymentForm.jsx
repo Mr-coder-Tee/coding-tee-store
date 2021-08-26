@@ -60,13 +60,13 @@ const street=setShippingData.address1+","+setShippingData.address2
           </tr>
           <tr>
             <td>Phala OM</td>
-            <td>4242424242</td>
+            <td>4086 8798 59</td>
             <td>ABSA</td>
             <td>Yes</td>
           </tr>
           <tr>
             <td>Manaka TT</td>
-            <td>4242424242</td>
+            <td>149 413 4681</td>
             <td>Capitec</td>
             <td>NO</td>
           </tr>

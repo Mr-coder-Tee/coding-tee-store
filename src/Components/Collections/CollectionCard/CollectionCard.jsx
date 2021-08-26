@@ -86,7 +86,7 @@ console.log("image",image);
             <span>color:</span>
             <ul className="colorlist">
               {product.variant_groups[0].options.map((colorBtn,index) => (
-                <button key={colorBtn.id} className="sizeBtn" onClick={()=>getColor(index)}/>
+                <button key={colorBtn.id} className={`sizeBtn ${colorBtn.name}`}onClick={()=>getColor(index)}/>
               ))}
             </ul>
           </div>
