@@ -1,13 +1,14 @@
 import React,{useState,useEffect} from "react";
-import { AddShoppingCart } from "@material-ui/icons";
+import { AddShoppingCart, CollectionsBookmarkTwoTone } from "@material-ui/icons";
 import useStyles from "./styles";
-import { IconButton } from "@material-ui/core";
+import { IconButton,Dropdown } from "@material-ui/core";
 
 const CollectionCard = ({ product, handleAddToCart }) => {
   const classes = useStyles();
   const [color,setColor]=useState(product.variant_groups[0].options[0].id);
   const [size,setSize]=useState(product.variant_groups[1].options[0].id)
   const [variant,setVariant]=useState({})
+  const [sizeArr,setSizeArr]=useState([])
 
   // console.log("c",product.variant_groups[0].id);
   // console.log("s",product.variant_groups[1].id);
@@ -25,6 +26,21 @@ const CollectionCard = ({ product, handleAddToCart }) => {
   }
 
   
+
+  useEffect(() => {        
+        
+    let finalSizeArray = product.variant_groups[0].options.map(option => {
+        let sizeInfo = {}
+
+        sizeInfo.key = option.name
+        sizeInfo.text = option.name
+        sizeInfo.value = option.id
+
+        return sizeInfo
+    })
+
+    setSizeArr(finalSizeArray)
+}, [])
 
 
   useEffect(() => {  
