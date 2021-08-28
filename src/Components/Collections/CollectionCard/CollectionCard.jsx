@@ -12,8 +12,7 @@ const CollectionCard = ({ product, handleAddToCart }) => {
 
   const [image,setImage]=useState(product.assets[0].url);
 
-  // console.log("product.assets",product.inventory.available);
-  // console.log("p",product);
+  console.log("p",product);
    
 
   const getColor=(i)=>{
@@ -25,31 +24,6 @@ const CollectionCard = ({ product, handleAddToCart }) => {
     setSize(product.variant_groups[1].options[j].id)
 
   }
-  
-
-//   useEffect(() => {        
-        
-//     let finalSizeArray = product.variant_groups[0].options.map(option => {
-//         let sizeInfo = {}
-
-//         sizeInfo.key = option.name
-//         sizeInfo.text = option.name
-//         sizeInfo.value = option.id
-
-//         return sizeInfo
-//     })
-
-//     setSizeArr(finalSizeArray)
-
-// }, [])
-
-
-  // useEffect(()=>{
-
-
-
-
-  // },[image])
 
   useEffect(() => {  
     const handleVariant=()=>{
@@ -58,16 +32,6 @@ const CollectionCard = ({ product, handleAddToCart }) => {
     handleVariant();
   
 }, [color,size])
-console.log("image",image);
-
-
-  // console.log('color--->',color);
-  // console.log('size--->',size);
-  // console.log('variant--->',variant);
- 
-
-//product.media.source
-
 
   return (
     <div className="collectioncard">

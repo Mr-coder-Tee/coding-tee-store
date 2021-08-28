@@ -19,6 +19,8 @@ function App() {
   const [cart, setCart] = useState({});
   const [order, setOrder] = useState({});
   const [errorMessage, setErrorMessage] = useState('')
+  const [categories,setCategories]=useState({})
+
 
   // X----------useState----------X
 
@@ -74,11 +76,20 @@ function App() {
     }
   };
 
+
+  const getCategory=async()=>{
+
+    const {data}=await commerce.categories.list()
+    setCategories(data)
+
+  }
   // X----------Fuctions----------X
 
   useEffect(() => {
     getProducts();
     getCart();
+    getCategory();
+
   }, []);
 
 
@@ -89,7 +100,7 @@ function App() {
 
         <Switch>
           <Route exact path="/">
-            <HomePage products={products} />
+          <HomePage products={products}  categories={categories}/>
           </Route>
 
           <Route exact path="/cart">
@@ -101,7 +112,7 @@ function App() {
             />
           </Route>
 
-          <Route exact path="/collection">
+          <Route exact path="/collection/:category">
             <Collection products={products} handleAddToCart={handleAddToCart} />
           </Route>
           <Route exact path="/checkout">

@@ -27,7 +27,7 @@ const Banner = () => {
         </p>
         <a href="#">T's and C's Apply</a>
         <div className="btnContainer">
-          <Button component={Link} to="/collection"  class="btn" >
+          <Button component={Link} to="/collection/all"   class="btn" >
             View All Collections
           </Button>
         </div>

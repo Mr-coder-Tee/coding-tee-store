@@ -4,7 +4,7 @@ import { useParams } from "react-router";
 const Legal = () => {
   const { id: policy } = useParams();
 
-  console.log("policy----<", policy);
+  // console.log("policy----<", policy);
 
   const Pp = () => (
     //Privacy Policy
