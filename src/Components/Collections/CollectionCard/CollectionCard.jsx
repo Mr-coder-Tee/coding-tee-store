@@ -12,9 +12,8 @@ const CollectionCard = ({ product, handleAddToCart }) => {
 
   const [image,setImage]=useState(product.assets[0].url);
 
-  console.log("product.assets",product.assets);
-  // console.log("s",product.variant_groups[1].id);
-  // console.log('color--->',color,colorGroupId,'size----->',size,sizeGroupId);
+  // console.log("product.assets",product.inventory.available);
+  // console.log("p",product);
    
 
   const getColor=(i)=>{
@@ -79,7 +78,7 @@ console.log("image",image);
       <div className="productDetails">
         <div className="inventoryName">
           <h3>{product.name}</h3>
-          
+          <h5 className="danger">{product.inventory.available+" left"}</h5>
         </div>
         <div className="selectproperties">
           <div className="color">

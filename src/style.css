@@ -41,7 +41,9 @@
     background:skyblue !important;
 }
 
-
+.danger{
+    color: red;
+}
 
 a{
     color: white;
@@ -278,7 +280,11 @@ body{
     justify-content: center;
     padding: 20px;
 }
-
+.inventoryName{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .collectioncard{
     position: relative;
     top: 0;
