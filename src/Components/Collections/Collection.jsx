@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CollectionCard from "./CollectionCard/CollectionCard";
 import { useParams } from "react-router";
 import { HelpOutlineOutlined } from "@material-ui/icons";
+import { commerce } from "../../lib/commerce";
 
 const Collection = ({ products, handleAddToCart }) => {
   const { category: category } = useParams();
+  const [heading, setHeading] = useState("");
 
-  /*
-product.categories
-*/
+  const getHeading = async () => {
+    if (category === "all") {
+      setHeading("ALL");
+    } else {
+      const  data  = await commerce.categories.retrieve(category);
+      console.log("data",data)
+      setHeading(data.name);
+    }
+  };
+
+  useEffect(() => {
+    getHeading();
+  }, []);
 
   const ShowAll = () => (
     <>
@@ -37,8 +49,13 @@ product.categories
   );
 
   return (
-    <div className="collectionContainer">
-      {category === "all" ? <ShowAll /> : <ShowByCartegory />}
+    <div className="collectinMainContainer">
+      <div className="collectionHeader">
+        <h2>Category:{" " + heading}</h2>
+      </div>
+      <div className="collectionContainer">
+        {category === "all" ? <ShowAll /> : <ShowByCartegory />}
+      </div>
     </div>
   );
 };
