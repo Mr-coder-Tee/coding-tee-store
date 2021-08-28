@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import cup from "../../Images/cup_java_icon.png";
 import { IconButton, Badge } from "@material-ui/core";
 import { ShoppingCart, ShoppingBasket } from "@material-ui/icons";
@@ -8,9 +8,19 @@ import useStyles from "./style";
 const NavBar = ({ totalItems }) => {
   const classes = useStyles();
   const location = useLocation();
+  const [navBar,setnavBar]=useState(false);
+
+  const changeNavBackground=()=>{
+    if(window.scrollY>=80){
+      setnavBar(true)
+    }else{
+      setnavBar(false)
+    }
+  }
+  window.addEventListener('scroll',changeNavBackground);
 
   return (
-    <div className={classes.NavContainer}>
+    <div className={ `${classes.NavContainer} ${navBar?'navbar active':'navbar'}`}>
       <div className={classes.NavContainerLogo}>
         <IconButton class={classes.logobtn} component={Link} to="/">
           <img src={cup} alt="img" />

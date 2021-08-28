@@ -133,13 +133,25 @@ body{
 .policy p{
     margin-bottom: 20px;
 }
-/* -----------------Global css------------------x *
+/* -----------------Global css------------------x */
 
 
 
 
 
+/* ------navbar------- */
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+}
 
+.navbar.active{
+    background: rgba(0, 255, 255, 0.3);
+}
+
+
+/* ------navbar------- x*/
 
 
 
