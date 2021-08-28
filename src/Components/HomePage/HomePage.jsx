@@ -19,18 +19,27 @@ name:category.name
 number of products:category.products
 */
 
+// useEffect(()=>{
 
-  if(!categories.length) return "Loading..."
+// },[categories.length])
+
+
+
+  // if(!categories.length) return "Loading..."
 
   return (
     <div className="homepage">
       <Banner />
       <SaleCountDown />
+
+      {
+        !categories.length? "Loading...":
       <div className="homepageContainer">
         {categories.map((category) => (
           <HomeCard key={category.id} category={category} />
-        ))}
+          ))}
       </div>
+        }
     </div>
   );
 };
