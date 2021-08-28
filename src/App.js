@@ -11,6 +11,8 @@ import { commerce } from "./lib/commerce";
 import "./style.css";
 import { storeCollection } from "./data";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {useWindowScroll} from 'react-use'
+
 
 function App() {
   // ----------useState----------
@@ -25,6 +27,8 @@ function App() {
   // X----------useState----------X
 
   // ----------Fuctions----------
+  const scrollToTop=()=>window.scrollTo({top:0,behavior:"smooth"})
+
   const getProducts = async () => {
     const { data } = await commerce.products.list();
     SetProducts(data);
@@ -89,6 +93,7 @@ function App() {
     getProducts();
     getCart();
     getCategory();
+    scrollToTop();
 
   }, []);
 

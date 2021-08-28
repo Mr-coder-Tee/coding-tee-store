@@ -3,6 +3,11 @@ import CollectionCard from "./CollectionCard/CollectionCard";
 import { useParams } from "react-router";
 import { HelpOutlineOutlined } from "@material-ui/icons";
 import { commerce } from "../../lib/commerce";
+// import { animateScroll } from "react-scroll";
+// import { animateTopScroll } from "react-scroll/modules/mixins/animate-scroll";
+import {useWindowScroll} from 'react-use'
+
+
 
 const Collection = ({ products, handleAddToCart }) => {
   const { category: category } = useParams();
@@ -17,9 +22,11 @@ const Collection = ({ products, handleAddToCart }) => {
       setHeading(data.name);
     }
   };
+  const scrollToTop=()=>window.scrollTo({top:0,behavior:"smooth"})
 
   useEffect(() => {
     getHeading();
+    scrollToTop();
   }, []);
 
   const ShowAll = () => (
