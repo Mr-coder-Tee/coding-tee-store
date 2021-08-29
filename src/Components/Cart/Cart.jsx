@@ -1,9 +1,15 @@
-import React from "react";
+import React,{useEffect} from "react";
 import CartCard from "./CartCard/CartCard";
 import { Link } from "react-router-dom";
 import { Button } from "@material-ui/core";
 
 const Cart = ({ cart,handleUpdateCartQty,handleRemoveFromCart,handleEmptyCart }) => {
+
+  useEffect(()=>{
+  const scrollToTop=()=>window.scrollTo({top:0,behavior:"smooth"})
+  scrollToTop();
+  },[])
+
 
 
   const EmptyCart = () => (

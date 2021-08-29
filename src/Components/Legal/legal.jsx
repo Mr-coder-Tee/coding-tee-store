@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router";
 
 const Legal = () => {
   const { id: policy } = useParams();
 
-  // console.log("policy----<", policy);
+  useEffect(() => {
+    const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+    scrollToTop();
+  }, [policy]);
 
   const Pp = () => (
     //Privacy Policy
