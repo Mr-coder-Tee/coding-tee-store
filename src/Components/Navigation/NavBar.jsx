@@ -18,7 +18,6 @@ const NavBar = ({ totalItems }) => {
     }
   }
   window.addEventListener('scroll',changeNavBackground);
-
   return (
     <div className={ `${classes.NavContainer} ${navBar?'navbar active':'navbar'}`}>
       <div className={classes.NavContainerLogo}>
@@ -28,7 +27,7 @@ const NavBar = ({ totalItems }) => {
         </IconButton>
       </div>
       <div className="cart-btn">
-        {(location.pathname === "/collection"||location.pathname === "/") && (
+        {(location.pathname !== "/checkout"&&location.pathname !== "/cart") && (
           <IconButton
             component={Link}
             to="/cart"

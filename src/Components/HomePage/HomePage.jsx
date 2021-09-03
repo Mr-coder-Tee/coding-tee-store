@@ -8,6 +8,8 @@ import { commerce } from "../../lib/commerce";
 
 
 const HomePage = ({getFilter,categories}) => {
+  const scrollToTop=()=>window.scrollTo({top:0,behavior:"smooth"})
+
 
 // console.log("categories 2",categories)
 
@@ -19,9 +21,9 @@ name:category.name
 number of products:category.products
 */
 
-// useEffect(()=>{
-
-// },[categories.length])
+useEffect(()=>{
+  scrollToTop();
+},[])
 
 
 

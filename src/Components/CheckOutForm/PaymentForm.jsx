@@ -2,10 +2,10 @@ import React from "react";
 import Review from "./Review";
 import { Button } from "@material-ui/core";
 
-const PaymentForm = ({ setShippingData, checkoutToken,backStep,handleCaptureCheckout,nextStep,shippingmethod }) => {
+const PaymentForm = ({ setShippingData, checkoutToken,backStep,handleCaptureCheckout,nextStep,shippingmethod,timeout }) => {
 const street=setShippingData.address1+","+setShippingData.address2
     const handleSubmit=()=>{
-
+ 
         const orderData={
             line_item:checkoutToken.live.line_items,
             customer:{firstname:setShippingData.firstname,lastname:setShippingData.lastname,email:setShippingData.email},
@@ -13,7 +13,7 @@ const street=setShippingData.address1+","+setShippingData.address2
                      street:street,
                      suburb:setShippingData.address2,
                      town_city:setShippingData.city,
-                     province:setShippingData.phone,
+                     phone:setShippingData.phone,
                      country: 'ZA',
                      postal_zip:setShippingData.zip},
             fulfillment:{shipping_method:shippingmethod},
