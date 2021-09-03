@@ -73,8 +73,6 @@ const Cart = ({
       </div>
       {!cart.line_items.length? (
         <EmptyCart />
-      ) : cart.line_items.length===0 ? (
-        <EmptyCart />
       ) : (
         <FilledCart />
       )}
