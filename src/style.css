@@ -835,8 +835,35 @@ body{
         width: 430px;
         height: 410px;
     }
+    .input{
+        padding: 10px 30px;
+        outline: none;
+    }
 }
+@media (max-width:350px) {
+    .collectioncard{
+        width: 250px; 
+        height: 350px;
+    }
+    .inventoryName{
+        font-size: .8em;
+    }
+    .color span,.size span,.inputSelectSize span, .AddShoppingCart p{
+         font-size: .8em;
 
+    }
+    .color .sizeBtn{
+        width: 10px;
+        height: 10px;
+    }
+    .addcart{
+        padding: 1px;
+    }
+    .input{
+        padding: 10px 15px;
+        outline: none;
+    }
+}
 
 
 
