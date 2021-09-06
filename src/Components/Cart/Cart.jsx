@@ -16,7 +16,7 @@ const Cart = ({
 
   const EmptyCart = () => (
     <div className="emptyHandler">
-      You have no items in your shoppubg cart,
+      You have no items in your shopping cart,
       <Link to="/">start adding some</Link>!
     </div>
   );
