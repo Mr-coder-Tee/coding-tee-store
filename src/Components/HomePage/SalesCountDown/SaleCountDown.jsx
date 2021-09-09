@@ -12,7 +12,7 @@ function SaleCountDown() {
     const [second,setSecond]=useState('00');
 
     const startTime=()=>{
-        const newYear=new Date('September 6,2021 23:59:59').getTime();
+        const newYear=new Date('September 15,2021 23:59:59').getTime();
         // December 31,2021 23:59:59
 
         interval=setInterval(()=>{
@@ -62,8 +62,8 @@ function SaleCountDown() {
       <div className="sale">
         <div className="countdowncard">
             <div className="header">
-                <h3>Count Down To Grand Opening</h3>
-                <p>We are some time away from opeing in the mean time check out our collection.</p>
+                <h3>Count Down To Grand Opening </h3>
+                <p>September 15,2021 <br /> We are some time away from opeing in the mean time check out our collection.</p>
             </div>
             <div className="timer-container">
 

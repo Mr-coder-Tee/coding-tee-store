@@ -7,15 +7,19 @@ const CollectionCard = ({ product, handleAddToCart }) => {
   const classes = useStyles();
   const [color,setColor]=useState(product.variant_groups[0].options[0].id);
   const [size,setSize]=useState(product.variant_groups[1].options[0].id)
+  const [gender,setGender]=useState(product.variant_groups[2].options[0].id)
 
   const [c,setC]=useState(product.variant_groups[0].options[0].name);
   const [s,setS]=useState(product.variant_groups[1].options[0].name);
+  const [g,setG]=useState(product.variant_groups[2].options[0].name);
 
   const [variant,setVariant]=useState({})
   const [sizeArr,setSizeArr]=useState([])
 
   const [image,setImage]=useState(product.assets[0].url);
 
+
+  console.log("product",product)
    
   const getColor=(i)=>{
     setColor(product.variant_groups[0].options[i].id)
@@ -27,6 +31,10 @@ const CollectionCard = ({ product, handleAddToCart }) => {
     setSize(product.variant_groups[1].options[j].id)
     setS(product.variant_groups[1].options[j].name)
 
+  }
+  const getGender=(k)=>{
+    setGender(product.variant_groups[2].options[k].id)
+    setG(product.variant_groups[2].options[k].name)
   }
 
   useEffect(() => {  
