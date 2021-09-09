@@ -19,7 +19,7 @@ const CartCard = ({ item, handleUpdateCartQty, handleRemoveFromCart }) => {
         <div className="variants">
           <strong>Color:</strong>
           {item.selected_options[0].option_name} <strong>Size:</strong>
-          {item.selected_options[1].option_name} <strong>Gender:</strong>F
+          {item.selected_options[1].option_name} <strong>Gender:</strong>{item.selected_options[2].option_name}
         </div>
         <div className="buttons">
           <div className="quantity">

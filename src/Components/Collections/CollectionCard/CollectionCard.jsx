@@ -19,7 +19,6 @@ const CollectionCard = ({ product, handleAddToCart }) => {
   const [image,setImage]=useState(product.assets[0].url);
 
 
-  console.log("product",product)
    
   const getColor=(i)=>{
     setColor(product.variant_groups[0].options[i].id)
@@ -39,7 +38,7 @@ const CollectionCard = ({ product, handleAddToCart }) => {
 
   useEffect(() => {  
     const handleVariant=()=>{
-      setVariant({[product.variant_groups[0].id]:color,[product.variant_groups[1].id]:size})
+      setVariant({[product.variant_groups[0].id]:color,[product.variant_groups[1].id]:size,[product.variant_groups[2].id]:gender,})
     }
     handleVariant();
   
@@ -85,12 +84,13 @@ const CollectionCard = ({ product, handleAddToCart }) => {
           <div className="color">
             <span>Gender:</span>
             <div className="colorlist">
-            <button className={`transparet blackBorder sizeBtn` } >
-                  M
+            {
+              product.variant_groups[2].options.map((genderbtn,index)=>(
+                <button key={genderbtn.id} className={`transparet blackBorder sizeBtn ${g===genderbtn.name? 'activeBtn':"blackBorder"}`} onClick={()=>getGender(index)}>
+                  {genderbtn.name}
                 </button>
-            <button className={`transparet blackBorder sizeBtn` } >
-                  F
-                </button>
+              ))
+            }
             </div>
           </div>
         </div>
