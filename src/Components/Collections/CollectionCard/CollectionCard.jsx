@@ -42,7 +42,6 @@ const CollectionCard = ({ product, handleAddToCart }) => {
     }else{
       setImgIndex(Imgindex+1)
     }
-    setImage(productImgs[Imgindex])
 
   }
   const left=()=>{
@@ -51,7 +50,6 @@ const CollectionCard = ({ product, handleAddToCart }) => {
     }else{
       setImgIndex(Imgindex-1)
     }
-    setImage(productImgs[Imgindex])
 
   }
 
@@ -59,9 +57,11 @@ const CollectionCard = ({ product, handleAddToCart }) => {
   
   useEffect(()=>{
     setImage(productImgs[Imgindex])
-    // console.log(product.id,'->image:',image)
-
   },[Imgindex])
+  useEffect(()=>{
+    setImage(product.assets[0].url)
+  },[])
+
 
   useEffect(() => {  
     const handleVariant=()=>{
