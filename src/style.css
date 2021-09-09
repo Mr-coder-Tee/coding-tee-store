@@ -27,6 +27,7 @@
     list-style: none;
     text-decoration: none;
 }
+
 .Black,.black,.BLACK{
     background:black !important;
 }
@@ -472,6 +473,29 @@ body{
     cursor: pointer;
     z-index: 99;
 }
+.imgCircles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    bottom: 1%;
+}
+.circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5px;
+    height: 5px;
+    background: black;
+    border-radius: 50%;
+    margin: 0 5px;
+    border: 1px solid white;
+}
+.collectioncard:hover .collectionImgbx .imgCircles{
+    bottom: 21%;
+}
 .arrow:hover{
     border: 1px solid rgba(255, 255, 255, 0.329);
 }
@@ -480,6 +504,10 @@ body{
 }
 .arrow-right{
     right: 5px;
+}
+.Imgaction{
+    
+    background: red;
 }
 /* -------collections---------x */
 
@@ -897,6 +925,9 @@ body{
     .input{
         padding: 10px 30px;
         outline: none;
+    }
+    .imgCircles{
+        bottom: 21%;
     }
 }
 @media (max-width:350px) {

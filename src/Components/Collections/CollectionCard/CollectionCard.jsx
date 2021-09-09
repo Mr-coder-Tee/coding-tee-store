@@ -14,9 +14,10 @@ const CollectionCard = ({ product, handleAddToCart }) => {
   const [g,setG]=useState(product.variant_groups[2].options[0].name);
 
   const [variant,setVariant]=useState({})
-  const [sizeArr,setSizeArr]=useState([])
 
   const [image,setImage]=useState(product.assets[0].url);
+  const [productImgs,setProductImgs]=useState([])
+  const [Imgindex,setImgIndex]=useState(0);
 
 
    
@@ -35,19 +36,78 @@ const CollectionCard = ({ product, handleAddToCart }) => {
     setGender(product.variant_groups[2].options[k].id)
     setG(product.variant_groups[2].options[k].name)
   }
+  const right=()=>{
+    if(Imgindex+1>=productImgs.length){
+      setImgIndex(0)
+    }else{
+      setImgIndex(Imgindex+1)
+    }
+    setImage(productImgs[Imgindex])
+
+  }
+  const left=()=>{
+    if(Imgindex-1<0){
+      setImgIndex(productImgs.length-1)
+    }else{
+      setImgIndex(Imgindex-1)
+    }
+    setImage(productImgs[Imgindex])
+
+  }
+
+ 
+  
+  useEffect(()=>{
+    setImage(productImgs[Imgindex])
+    // console.log(product.id,'->image:',image)
+
+  },[Imgindex])
 
   useEffect(() => {  
     const handleVariant=()=>{
       setVariant({[product.variant_groups[0].id]:color,[product.variant_groups[1].id]:size,[product.variant_groups[2].id]:gender,})
     }
+    const handleImgs=()=>{
+      let imgbx=[]
+      product.assets.map((img)=>(
+        imgbx.push(img.url)
+      ))
+      setProductImgs(imgbx)
+    }
+    handleImgs();
     handleVariant();
   
 }, [color,size])
+
 
   return (
     <div className="collectioncard">
       <div className="collectionImgbx">
         <img src={image} alt="" />
+        <IconButton
+            class="arrow arrow-left"
+            aria-label="add to cart"
+            onClick={() => left()}
+          >
+            <ArrowLeft />
+          </IconButton>
+          <IconButton
+            class="arrow arrow-right"
+            aria-label="add to cart"
+            onClick={() => right()}
+          >
+            <ArrowRight />
+          </IconButton>
+          <div className="imgCircles">
+
+
+          {
+            productImgs.map((nums,index)=>(
+              <div key={index} className={`circle ${index===Imgindex?'Imgaction':'circle'}`}>
+              </div>
+            ))
+          }
+          </div>
       </div>
       <div className="productDetails">
         <div className="inventoryName">
