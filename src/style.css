@@ -29,17 +29,50 @@
 }
 .Black,.black,.BLACK{
     background:black !important;
-    
 }
 .White,.white,.WHITE{
     background:white !important;
+
 }
 .Grey,.grey,.GREY{
     background:grey !important;
+
 }
 .Skyblue,.skyblue,.SKYBLUE,.SkyBlue{
     background:skyblue !important;
 }
+
+
+.transparet{
+    background: transparent !important;
+}
+.blackBorder{
+    border: 1px solid black !important;
+}
+.activeBtn{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.activeBtn::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background:rgb(143, 142, 142);
+    transform: rotate(45deg);
+}
+.activeBtn::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background:rgb(143, 142, 142);
+    transform: rotate(135deg);
+}
+
+
 
 .danger{
     color: red;
@@ -278,6 +311,9 @@ body{
 .homecard:hover .blackColor {
     background: rgba(0, 0, 0, 0.7);
 }
+.variants{
+    margin-bottom: 10px;
+}
 /*x-----card-----x*/
 
 
@@ -315,6 +351,7 @@ body{
     overflow: hidden;
 }
 .collectionImgbx{
+    position: relative;
     width: 100%;
     height: 100%;
 }
@@ -421,7 +458,29 @@ body{
 .inputSelectSize span{
     margin-right: 2px;
 }
-
+.arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: transparent;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 99;
+}
+.arrow:hover{
+    border: 1px solid rgba(255, 255, 255, 0.329);
+}
+.arrow-left{
+    left: 5px;
+}
+.arrow-right{
+    right: 5px;
+}
 /* -------collections---------x */
 
 
