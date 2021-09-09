@@ -81,7 +81,8 @@ const CollectionCard = ({ product, handleAddToCart }) => {
               <div className="select"/>
             </div>
           </div>
-          <div className="color">
+
+          <div className="genderdiv">
             <span>Gender:</span>
             <div className="colorlist">
             {
@@ -92,8 +93,10 @@ const CollectionCard = ({ product, handleAddToCart }) => {
               ))
             }
             </div>
+          
           </div>
         </div>
+       
         <div className="AddShoppingCart">
           <p>
             <strong>price:{product.price.formatted_with_symbol}</strong>

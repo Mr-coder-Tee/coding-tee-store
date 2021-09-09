@@ -327,7 +327,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
+    padding: 10px;
 }
 .collectionHeader{
     width: 100%;
@@ -342,7 +342,7 @@ body{
 .collectioncard{
     position: relative;
     top: 0;
-    width: 300px; 
+    width: 350px; 
     height: 500px;
     margin: 10px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.349);
@@ -399,7 +399,7 @@ body{
     color: white;
 
 }
-.color,.size{
+.color,.size,.genderdiv{
     display: flex;
     align-items: center;
 }
