@@ -334,6 +334,7 @@ body{
     width: 100%;
     text-align: center;
     padding: 10px 0;
+
 }
 .inventoryName{
     display: flex;
@@ -350,6 +351,8 @@ body{
     border-radius: 10px;
     font-family: var(--SourceCodeProfontfamily);
     overflow: hidden;
+    border: 2px solid red;
+
 }
 .collectionImgbx{
     position: relative;
