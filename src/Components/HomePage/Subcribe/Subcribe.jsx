@@ -79,7 +79,6 @@ const Subcribe = () => {
                     className="mT-10 input"
                     label="Your Email"
                     name="email"
-                    defaultValue="hello"
                     type="text"
                   />
                 </div>
