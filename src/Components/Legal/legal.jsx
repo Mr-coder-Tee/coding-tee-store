@@ -18,11 +18,10 @@ const Legal = () => {
         When you purchase something from our store, as part of the buying and
         selling process, we collect the personal information you give us such as
         your name, address and email address. When you browse our store, we also
-        automatically receive your computer’s internet protocol (IP) address in
-        order to provide us with information that helps us learn about your
-        browser and operating system. Email marketing (if applicable): With your
-        permission, we may send you emails about our store, new products and
-        other updates.
+        automatically receive your computer’s internet protocol (IP) address to
+        provide us with information that helps us learn about your browser and
+        operating system. Email marketing (if applicable): With your permission,
+        we may send you emails about our store, new products and other updates.
       </p>
 
       <h4>How do you get my consent?</h4>
@@ -32,7 +31,7 @@ const Legal = () => {
         return a purchase, we imply that you consent to our collecting it and
         using it for that specific reason only. If we ask for your personal
         information for a secondary reason, like marketing, we will either ask
-        you directly for your expressed consent, or provide you with an
+        you directly for your expressed consent or provide you with an
         opportunity to say no.
       </p>
 
@@ -46,7 +45,7 @@ const Legal = () => {
 
       <h4>Commerce js</h4>
       <p>
-        Our store is hosted on commercejs Inc. They provide us with the online
+        Our store is hosted on commercejs Inc. They provide us with an online
         e-commerce platform that allows us to sell our products and services to
         you. Your data is stored through commercejs’s data storage, databases
         and the general commercejs application. They store your data on a secure
@@ -55,19 +54,8 @@ const Legal = () => {
 
       <h4>Payment</h4>
       <p>
-        If you choose a direct payment gateway to complete your purchase, then
-        commercejs stores your credit card data. It is encrypted through the
-        Payment Card Industry Data Security Standard (PCI-DSS). Your purchase
-        transaction data is stored only as long as is necessary to complete your
-        purchase transaction. After that is complete, your purchase transaction
-        information is deleted. All direct payment gateways adhere to the
-        standards set by PCI-DSS as managed by the PCI Security Standards
-        Council, which is a joint effort of brands like Visa, MasterCard,
-        American Express and Discover. PCI-DSS requirements help ensure the
-        secure handling of credit card information by our store and its service
-        providers. For more insight, you may also want to read commercejs’s
-        Terms of Service (https://www.commercejs.com/legal/terms) or Privacy
-        Statement (https://www.commercejs.com/legal/privacy).
+        You have two options of payments which is EFT and Direct payment. Use
+        the Order Id in the email as the reference to your payment.
       </p>
     </div>
   );
@@ -76,17 +64,17 @@ const Legal = () => {
     <div className="policy">
       <h1>Delivery Policy Refund Policy</h1>
       <p>
-        Free standard shipping to South Africa on orders over R1000 No promo
-        code required - free standard shipping is automatically applied at
-        checkout.Free shipping is a limited promotion and not available for
-        orders delivered outside South Africa.
+        Free standard shipping to South Africa on orders over R500. Free
+        standard shipping is automatically applied at checkout. Free shipping is
+        a limited promotion and is not available for orders delivered outside
+        South Africa.
       </p>
 
       <h4>DELIVERY TIMES AND COSTS</h4>
       <p>
         It will take 7 business days for your product to get to you. Please take
-        note that, according to Bogart man courier service agreement, all orders
-        will only check out on Tuesdays and Thursdays for delivery.
+        note that, according to courier service agreement, all orders will only
+        check out on Mondays and Fridays for delivery.
       </p>
 
       <h4>South Africa</h4>
@@ -97,24 +85,6 @@ const Legal = () => {
         to check your parcel’s progress. To track your parcel and get an
         estimated delivery time, just follow the link in the tracking email.
       </p>
-
-      <h4>DELIVERY CONDITIONS</h4>
-      <p>
-        You will need to sign for your order when it arrives. If you are not
-        available to sign for your order, Bogart Man will leave a note with
-        instructions for pick up from a designated Bogart Man Store. While we do
-        everything we can to ensure your order is delivered in a timely manner,
-        we will not be liable for any loss or damage incurred by any person as a
-        result of delay caused by our carrier that we have no control over or by
-        any event which is out of our reasonable control or foresight including
-        but not limited to any delay caused by an incorrect delivery address
-        being provided to us. If any items in your order are out of stock at the
-        time your order is packed, we will notify you via email and refund you
-        for those items. Problems with your order? We want you to have the best
-        online shopping experience, so if you have any problems with your order,
-        please let us know on (011) 262-8819 / 083-5987-297 or send an email to
-        onlineshop@bogart.co.za
-      </p>
     </div>
   );
   const Dp = () => (
@@ -123,43 +93,43 @@ const Legal = () => {
       <h1>Refund policy</h1>
       <h4>Exchanges</h4>
       <p>
-        No cash refunds on any purchases. we will gladly exchange goods within
+        No cash refunds on any purchases, we will gladly exchange goods within
         14 days. Please make sure to keep your receipt. Items to be in original
         condition.
       </p>
       <h4>Returns</h4>
       <p>
         Our policy lasts 14 days. If 14 days have gone by since your purchase,
-        unfortunately we can’t offer you a refund or exchange. To be eligible
+        unfortunately, we can’t offer you a refund or exchange. To be eligible
         for a return, your item must be unused and in the same condition that
         you received it. It must also be in the original packaging.
       </p>
       <h4>Additional non-returnable items: </h4>
       <p>
         There are certain situations where only partial refunds are granted (if
-        applicable) Any item not in its original condition, is damaged or
+        applicable) Any item, not in its original condition, is damaged or
         missing parts for reasons not due to our error. Any item that is
-        returned more than 7 days after delivery
+        returned more than 7 days after delivery.
       </p>
       <h4>Late or missing refunds (if applicable)</h4>
       <p>
         If you haven’t received a refund yet, first check your bank account
         again. Then contact your credit card company, it may take some time
-        before your refund is officially posted. Next contact your bank. There
+        before your refund is officially posted. Next, contact your bank. There
         is often some processing time before a refund is posted. If you’ve done
         all of this and you still have not received your refund yet, please
-        contact us via whatsapp on 0683010023.
+        contact us via WhatsApp on 0683010023.
         <h4>Shipping Address</h4>
         <p>
-          Please enter the correct shipping addres, there will be no refunds due
-          to the package being delivered to the wrong address.
+          Please enter the correct shipping address, there will be no refunds
+          due to the package being delivered to the wrong address.
         </p>
       </p>
       <h4>Exchanges</h4>
       <p>
         We only replace or exchange items if they are defective or damaged. If
-        an item is of a wrong size you will will pay all shippment to exchange
-        for size
+        an item is of the wrong size you will pay all shipping to exchange for
+        the size.
       </p>
       <h4>Shipping</h4>
       <p>
