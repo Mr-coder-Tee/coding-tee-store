@@ -27,7 +27,7 @@ const CollectionCard = ({ product, handleAddToCart }) => {
   const getColor = (i) => {
     setColor(product.variant_groups[0].options[i].id);
     setC(product.variant_groups[0].options[i].name);
-    setImage(product.assets[i].url);
+    // setImage(product.assets[i].url);
   };
   const getSize = (j) => {
     setSize(product.variant_groups[1].options[j].id);
@@ -118,7 +118,7 @@ const CollectionCard = ({ product, handleAddToCart }) => {
                 <button
                   key={colorBtn.id}
                   className={`${colorBtn.name} sizeBtn ${
-                    c === colorBtn.name ? "activeBtn" : colorBtn.name
+                    c === colorBtn.name ? "activeBtnColor" : colorBtn.name
                   }`}
                   onClick={() => getColor(index)}
                 />
@@ -143,6 +143,7 @@ const CollectionCard = ({ product, handleAddToCart }) => {
                 //   <span>{sizebtn.name}</span>
                 //   <input type="radio" onChange={()=>getSize(index)} value={sizebtn.name} name={product.variant_groups[1].id}/>
                 // </div>
+
               ))}
               <div className="select" />
             </div>

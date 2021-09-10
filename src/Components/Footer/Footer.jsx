@@ -40,13 +40,13 @@ const Footer = ({ categories }) => {
           <div className={classes.FooterCollections}>
             <h2>Collections</h2>
             <ul>
-              {categories.map((categories) => (
+              {/* {categories.map((categories) => (
                 <li key={categories.id}>
                   <Link to={"/collection/"+categories.id}>
                   {categories.name}
-                  </Link>
+                  </Link> 
                 </li>
-              ))}
+              ))} */}
             </ul>
           </div>
           <div className={classes.legal}>

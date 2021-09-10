@@ -12,16 +12,14 @@ import "./style.css";
 import { storeCollection } from "./data";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-
 function App() {
   // ----------useState----------
 
   const [products, SetProducts] = useState([]);
   const [cart, setCart] = useState({});
   const [order, setOrder] = useState({});
-  const [errorMessage, setErrorMessage] = useState('')
-  const [categories,setCategories]=useState({})
-
+  const [errorMessage, setErrorMessage] = useState("");
+  const [categories, setCategories] = useState({});
 
   // X----------useState----------X
 
@@ -34,13 +32,9 @@ function App() {
   const getCart = async () => {
     setCart(await commerce.cart.retrieve());
   };
-  const handleAddToCart = async (
-    productId,
-    quantity,
-    variant
-  ) => {
+  const handleAddToCart = async (productId, quantity, variant) => {
     const item = await commerce.cart
-      .add(productId, quantity,variant ) //, { colorGroupId: color, sizeGroupId: size }
+      .add(productId, quantity, variant) //, { colorGroupId: color, sizeGroupId: size }
       .catch((err) => {
         console.log("error--", err);
       });
@@ -74,27 +68,22 @@ function App() {
       setOrder(inComingOrder);
       refreshCart();
     } catch (error) {
-      setErrorMessage(error.data.error.message)
+      setErrorMessage(error.data.error.message);
     }
   };
 
-
-  const getCategory=async()=>{
-
-    const {data}=await commerce.categories.list()
-    setCategories(data)
-
-  }
+  const getCategory = async () => {
+    const { data } = await commerce.categories.list();
+    setCategories(data);
+  };
   // X----------Fuctions----------X
 
   useEffect(() => {
     getProducts();
     getCart();
     getCategory();
-
   }, []);
 
- 
   return (
     <Router>
       <div className="App-container">
@@ -102,7 +91,7 @@ function App() {
 
         <Switch>
           <Route exact path="/">
-          <HomePage products={products}  categories={categories}/>
+            <HomePage products={products} categories={categories} />
           </Route>
 
           <Route exact path="/cart">
@@ -118,13 +107,17 @@ function App() {
             <Collection products={products} handleAddToCart={handleAddToCart} />
           </Route>
           <Route exact path="/checkout">
-            <Checkout cart={cart} handleCaptureCheckout={handleCaptureCheckout} order={order} error={errorMessage}/>
+            <Checkout
+              cart={cart}
+              handleCaptureCheckout={handleCaptureCheckout}
+              order={order}
+              error={errorMessage}
+            />
           </Route>
 
           <Route exact path="/legal/:id">
-            <Legal/>
+            <Legal />
           </Route>
-
         </Switch>
         <Subcribe />
         <Footer categories={categories} />
