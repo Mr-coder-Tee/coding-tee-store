@@ -21,9 +21,9 @@ const NavBar = ({ totalItems }) => {
   return (
     <div className={ `${classes.NavContainer} ${navBar?'navbar active':'navbar'}`}>
       <div className={classes.NavContainerLogo}>
-        <IconButton class={classes.logobtn} component={Link} to="/">
+        <IconButton className={classes.logobtn} component={Link} to="/">
           <img src={cup} alt="img" />
-          <h2>Coding Tee</h2>
+          <h4>Coding Tee</h4>
         </IconButton>
       </div>
       <div className="cart-btn">
@@ -33,6 +33,7 @@ const NavBar = ({ totalItems }) => {
             to="/cart"
             aria-label="show cart item"
             className={classes.btn}
+
           >
             <Badge badgeContent={totalItems}>
               <ShoppingCart />

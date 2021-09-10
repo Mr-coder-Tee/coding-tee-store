@@ -12,7 +12,7 @@ export default makeStyles(()=>({
         border: "2px solid rgba(0, 0, 0, .09)",
         marginBottom:"1px",
         background:"var(--NavBarColor)",
-    },
+    }, 
     NavContainerLogo:{
         display: "flex",
         justifyContent:"center",
@@ -29,7 +29,7 @@ export default makeStyles(()=>({
             color:"white",
             filter:"invert(1)",
         },
-        '& h2':{
+        '& h4':{
             fontFamily: "var(--SourceCodePro)",
             color:"white",
         }
