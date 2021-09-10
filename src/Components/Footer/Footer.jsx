@@ -5,7 +5,6 @@ import { WbSunnyOutlined, Brightness2Outlined } from "@material-ui/icons";
 import cup from "../../Images/cup_java_icon.png";
 
 const Footer = ({ categories }) => {
-  console.log("categories-->", categories);
 
   const FullList = () => {
     return (
