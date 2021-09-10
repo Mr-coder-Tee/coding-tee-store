@@ -69,7 +69,7 @@ const Footer = ({ categories }) => {
           <div className={classes.FooterCollections}>
             <h2>Collections</h2>
             {
-              categories.length===0?<LoadingList/>:<FullList/>
+              !categories.length?<LoadingList/>:<FullList/>
             }
           </div>
           <div className={classes.legal}>

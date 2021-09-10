@@ -57,6 +57,7 @@
     align-items: center;
     background: rgb(109, 109, 109) !important;
     color: white !important;
+    font-weight: 600 !important;
 }
 .activeBtnColor{
     position: relative;
