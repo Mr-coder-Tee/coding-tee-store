@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { WbSunnyOutlined, Brightness2Outlined } from "@material-ui/icons";
 import cup from "../../Images/cup_java_icon.png";
 
-const Footer = ({ products }) => {
+const Footer = ({ categories }) => {
+  console.log('categories-->',categories)
   const classes = useStyles();
   return (
     <div className={classes.footerContainer}>
@@ -39,8 +40,12 @@ const Footer = ({ products }) => {
           <div className={classes.FooterCollections}>
             <h2>Collections</h2>
             <ul>
-              {products.map((categories) => (
-                <li>{categories.category}</li>
+              {categories.map((categories) => (
+                <li key={categories.id}>
+                  <Link to={"/collection/"+categories.id}>
+                  {categories.name}
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>

@@ -127,7 +127,7 @@ function App() {
 
         </Switch>
         <Subcribe />
-        <Footer products={products} />
+        <Footer categories={categories} />
       </div>
     </Router>
   );
